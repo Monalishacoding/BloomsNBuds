@@ -23,7 +23,7 @@
 
     {{-- Whatsapp --}}
     <div class="wpF">
-        <a href="https://wa.me/7978399726">
+        <a href="https://wa.me/917779834191">
             <img src="/assets/images/wp.png" alt="Click to chat">
         </a>
     </div>
