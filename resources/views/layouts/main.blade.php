@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/style-v1.1.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
 </head>
 <body>
     
