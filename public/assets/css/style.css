@@ -52,3 +52,16 @@ body {
 .footer-para{
     font-size: 1.2rem;
 }
+
+/* Whatsapp */
+
+.wpF {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.wpF a img {
+    width: 65px;
+    height: 65px;
+}

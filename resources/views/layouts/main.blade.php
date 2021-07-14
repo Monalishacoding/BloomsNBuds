@@ -20,6 +20,13 @@
     @yield('body')
     @include('layouts.footer')
 
+    {{-- Whatsapp --}}
+    <div class="wpF">
+        <a href="https://wa.me/7978399726">
+            <img src="/assets/images/wp.png" alt="Click to chat">
+        </a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
