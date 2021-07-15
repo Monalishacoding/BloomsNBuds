@@ -11,6 +11,9 @@
       <div class="carousel-item">
         <img src="/assets/images/plant_fa_homepage_banner_d_0.jpg" class="d-block w-100" alt="...">
       </div>
+      <div class="carousel-item">
+        <img src="/assets/images/plant_fa_homepage_banner_d_0.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -111,3 +111,23 @@ body {
 .boxes-container .box  .img-box:hover img {
     transform: scale(1.1);
 }
+
+
+@media (max-width: 995px) {
+    .boxes-container .box .img-box {
+        width: 150px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .boxes-container .box .img-box {
+    
+        width: 130px !important;
+    }
+}
+
+@media (max-width: 570px){
+.boxes-container {
+    flex-direction: column;
+  }
+}
