@@ -1,4 +1,4 @@
-<section id="testimonials">
+<section id="testimonials" class="df-sec">
     <div class="container">
         <div class="row testimonial-slider">
 

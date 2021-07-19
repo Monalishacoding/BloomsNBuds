@@ -1,4 +1,4 @@
-<section id="clientLogo">
+<section id="clientLogo" class="df-sec-half">
     <div class="container">
         <div class="row clientslogo-slider">
             <div class="col-md-3">
