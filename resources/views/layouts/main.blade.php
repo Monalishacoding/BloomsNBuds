@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/assets/css/lightbox.css">
 </head>
 
-<body>
+<body> 
 
     @include('layouts.header')
     @yield('body')
