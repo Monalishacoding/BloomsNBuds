@@ -59,13 +59,18 @@
             <div class="row gallery-container">
                 @for ($i = 0; $i < 8; $i++)
                     <div class="col-md-3 mb-4">
-                        <div class="box">
-                            <img src="/assets/images/combo.png" alt="Combo">
-                            <div class="data-box">
+                        <a
+                            href="/assets/images/combo.png"
+                            data-lightbox="image-{{$i}}"
+                            data-title="Combo"
+                            class="box"
+                        >
+                            <img  src="/assets/images/combo.png" alt="Combo">
+                            {{-- <div class="data-box">
                                 <h5>Title
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, adipisci tempore? Voluptatum corporis delectus praesentium.</p>
-                            </div>
-                        </div>
+                            </div> --}}
+                        </a>
                     </div>
                 @endfor
             </div>
