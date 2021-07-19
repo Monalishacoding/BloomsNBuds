@@ -7,39 +7,51 @@
     @include('layouts.slider')
 
     {{-- Featured Services --}}
-    <section id="ftServices" class="my-5 py-3">
+    <section id="ftServices" class="my-5 pt-3">
         <div class="container">
             <div class="boxes-container">
                 <div class="box">
                     <a href="#" class="img-box">
                         <img src="/assets/images/flower.png" alt="Flowers">
                     </a>
-                    <h3 class="my-3"> <a href="#"> Flowers</a></h3>
+                     <a class="my-3" href="#"> Flowers</a>
                 </div>
                 <div class="box">
                     <a href="#" class="img-box">
                         <img src="/assets/images/cakes.png" alt="Cakes">
                     </a>
-                    <h3 class="my-3"><a href="#">Cakes</a></h3>
+                    <a  class="my-3" href="#">Cakes</a>
                 </div>
                 <div class="box">
                     <a href="#" class="img-box">
                         <img src="/assets/images/events.png" alt="Events">
                     </a>
-                    <h3 class="my-3"><a href="#">Events</a></h3>
+                    <a class="my-3" href="#">Events</a>
                 </div>
                 <div class="box">
                     <a href="#" class="img-box">
                         <img src="/assets/images/combo.png" alt="Combo">
                     </a>
-                    <h3 class="my-3"><a href="#">Combo</a></h3>
+                    <a class="my-3" href="#">Combo</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="img-box">
+                        <img src="/assets/images/combo.png" alt="Combo">
+                    </a>
+                    <a class="my-3" href="#">Combo</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="img-box">
+                        <img src="/assets/images/combo.png" alt="Combo">
+                    </a>
+                    <a class="my-3" href="#">Combo</a>
                 </div>
             </div>
         </div>
     </section>
 
     {{-- Gallery --}}
-    <section id="gallery" class="py-5">
+    <section id="gallery" class="my-5 pt-3">
         <div class="container">
             <div class="title-box text-center mb-5">
                 <h2 class="heading-title">Some of our Pictures</h4>
@@ -50,8 +62,8 @@
                         <div class="box">
                             <img src="/assets/images/combo.png" alt="Combo">
                             <div class="data-box">
-                                <h5>Title</h5>     
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, adipisci tempore? Voluptatum corporis delectus praesentium.</p>          
+                                <h5>Title
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, adipisci tempore? Voluptatum corporis delectus praesentium.</p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +73,7 @@
     </section>
 
     {{-- Why us --}}
-    <section id="whyUs" >
+    <section id="whyUs"class="my-5 pt-3" >
         <div class="container">
             <div class="wrapper py-5">
                 <h2>Why Us</h3>

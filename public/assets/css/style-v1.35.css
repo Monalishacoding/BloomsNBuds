@@ -7,12 +7,21 @@ body {
     font-family: 'Caveat', cursive,'Josefin Sans', sans-serif;
 }
 
+.fixed-header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    background: #fff;
+    border-bottom: 1px solid #0000001f;
+}
 
 .d-space {
     margin: 6rem 0;
 }
 
-.border-shadow { 
+.border-shadow {
     border-bottom: 1px solid #0000001f;
 }
 
@@ -73,8 +82,10 @@ body {
 
 .boxes-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+
+    /* display: grid; */
 }
 
 .boxes-container .box {
@@ -84,7 +95,8 @@ body {
 }
 
 .boxes-container .box  .img-box{
-    width: 200px;
+    /* max-width: 90px; */
+    width: 140px;
     border-radius: 100%;
     overflow: hidden;
     transition: all .5s ease;
@@ -94,7 +106,7 @@ body {
     transform: scale(1.1);
 }
 
-.boxes-container .box:hover h3 a {
+.boxes-container .box:hover  a {
     color: grey;
 }
 
@@ -103,9 +115,11 @@ body {
     transition: all .5s ease;
 }
 
-.boxes-container .box h3 a {
-    text-decoration: none;
+.boxes-container .box  a {
     color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .boxes-container .box h3 a:hover {
@@ -117,7 +131,13 @@ body {
     transform: scale(1.1);
 }
 
+@media ( max-width: 460px ) {
+    .box .img-box {
+        width: 90px !important;
+    }
+}
 
+/*
 @media (max-width: 995px) {
     .boxes-container .box .img-box {
         width: 150px !important;
@@ -126,16 +146,16 @@ body {
 
 @media (max-width: 768px) {
     .boxes-container .box .img-box {
-    
-        width: 130px !important;
+
+        width: 110px !important;
     }
 }
 
 @media (max-width: 570px){
 .boxes-container {
-    flex-direction: column;
+    flex-flow: wrap;
   }
-}
+} */
 
 
 /* Gallery */
@@ -158,6 +178,7 @@ body {
 .gallery-container .box {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .gallery-container .box:hover .data-box{
@@ -311,7 +332,11 @@ body {
     .boxes-container .box {
         margin-bottom: 20px;
     }
-    .boxes-container .box .img-box {
-        width: 230px !important;
-    }
+}
+
+
+.carousel-indicators [data-bs-target] {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
 }

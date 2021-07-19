@@ -10,7 +10,7 @@
                 <div class="logobox text-center">
                     <img src="/assets/images/logo.svg" alt="Logo 1">
                 </div>
-               
+
             </div>
             <div class="col-md-3">
                 <div class="tst-box">
@@ -23,7 +23,7 @@
                 <div class="logobox text-center">
                     <img src="/assets/images/logo.svg" alt="Logo 1">
                 </div>
-               
+
             </div>
             <div class="col-md-3">
                 <div class="tst-box">
@@ -42,7 +42,7 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1000,
             // dots: true,
             responsive: [{
                     breakpoint: 768,
@@ -56,7 +56,7 @@
                 {
                     breakpoint: 480,
                     settings: {
-                        arrows: true,
+                        arrows: false,
                         centerMode: false,
                         // centerPadding: '40px',
                         slidesToShow: 2
