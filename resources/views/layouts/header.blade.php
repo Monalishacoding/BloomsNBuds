@@ -20,7 +20,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light  main-header">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('page.index')}}">
                 <img width="140px" src="/assets/images/logo.png" alt="{{env('APP_NAME')}}">
             </a>
             <button
