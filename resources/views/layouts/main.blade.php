@@ -49,13 +49,8 @@
             else sticky.removeClass('fixed-header');
         });
 
-        $(document).ready(function() {
-
-                $("html").niceScroll();
-
-            }
-
-        );
+        $(document).ready(function() { $("html").niceScroll();}
+);
     </script>
 
     <!--Start of Tawk.to Script-->
