@@ -563,3 +563,24 @@ padding: 5rem !important; }
 
   .form-dark .form-control::-webkit-input-placeholder {
     color: #ffffff; }
+
+
+    /* Contact Us */
+
+.ct-box {
+    box-shadow:  0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.addr-box {
+    border: 1px solid #eee;
+    padding: 20px;
+}
+.addr-box a {
+    text-decoration: none;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-weight: 600;
+
+}
