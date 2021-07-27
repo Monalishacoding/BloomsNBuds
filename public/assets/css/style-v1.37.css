@@ -4,10 +4,14 @@
     --secondary-color-dark: rgb(144, 175, 83);
     --footer-bottom-color: #D0F6A5;
 }
-body {
-    font-family: 'Caveat', cursive,'Josefin Sans', sans-serif;
+
+html {
+    font-size: 12px !important;
 }
 
+body {
+    font-family: 'Comfortaa', cursive,'Josefin Sans', sans-serif;
+}
 
 .btn-primary {
     background: var(--secondary-color);
@@ -84,7 +88,7 @@ body {
     .main-header .topbar a {
         text-decoration: none;
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600; }
       .main-header .topbar a:hover {
         color: #000; }
@@ -110,7 +114,7 @@ body {
 
 .navbar-nav .nav-link {
     font-weight: 800 !important;
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
     color:black;
 }
 
@@ -140,13 +144,13 @@ body {
 .footer-links li > a{
     color: black;
     /* padding-bottom: 1rem ; */
-    font-size: 1.1rem;
+    font-size: 1rem;
     display:block;
     padding-bottom: 1rem;
 }
 
 .footer-para{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -518,7 +522,7 @@ padding: 5rem !important; }
     padding: 10px 20px;
     -webkit-box-shadow: none;
             box-shadow: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     background: #f6f6f6;
     color: #022d62;
@@ -580,7 +584,7 @@ padding: 5rem !important; }
 .addr-box a {
     text-decoration: none;
     color: #6f6f6f;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
 
 }
