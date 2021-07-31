@@ -27,6 +27,11 @@ Route::get('/contact-us' ,
     ->name('page.contact');
 
 
+Route::post('/contact-us' , 
+[PagesController::class , 'sendContactDetails'])
+->name('send.contactus');
+
+
 Route::get('/services' , 
     [PagesController::class , 'services'])
     ->name('page.services');
@@ -36,3 +41,10 @@ Route::get(
     '/our-clients' , 
     [PagesController::class , 'ourClients'])
     ->name('page.clients');  
+
+Route::post('/contact' , 
+    [PagesController::class , 'sendContactDetails'])
+    ->name('send.contactus');
+
+
+// bholi si soorat 

@@ -5,8 +5,8 @@
                 <div class="col-12">
                 <div class="d-flex justify-content-between">
                     <div class="me-4 d-inline-block py-1">
-                    <a class="me-3" href="mailto:customer@bloomnbuds.in" target="_top"><i class="far fa-envelope me-2 fa-flip-horizontal theme-s"></i>customer@bloomnbuds.in</a>
-                    <a class="me-3" href=""><i class="fas fa-map-marker-alt theme-s me-2"></i>Patna, Bihar</a>
+                    <a class="me-3" href="mailto:wecare@bloomnbuds.in" target="_top"><i class="far fa-envelope me-2 fa-flip-horizontal theme-s"></i>wecare@bloomnbuds.in</a>
+                    <a class="me-3" href=""><i class="fas fa-map-marker-alt theme-s me-2"></i>Bhubaneswar, Odisha</a>
                     </div>
                     <div class="d-inline-block py-1">
                         <ul class="list-unstyled">
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item px-3">
-                        <a class="nav-link active" aria-current="page" href="{{ route('page.index') }}">Home</a>
+                        <a class="nav-link {{Route::is('/')}}" aria-current="page" href="{{ route('page.index') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="{{route('page.about')}}">About</a>
