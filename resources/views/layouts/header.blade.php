@@ -43,9 +43,9 @@
                     <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('page.services')}}">Services</a>
                     </li>
-                    <li class="nav-item px-3">
+                    {{-- <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('page.clients')}}">Clients</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('page.contact')}}">Contact Us</a>
                     </li>
