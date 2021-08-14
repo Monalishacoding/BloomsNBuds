@@ -30,7 +30,7 @@ class SendContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from('no-reply@bloomsnbuds.in' , env('APP_NAME'))
+        return $this->from('wecare@bloomsnbuds.in' , env('APP_NAME'))
         ->replyTo('wecare@bloomsnbuds.in' , env('APP_NAME'))
         ->to('wecare@bloomsnbuds.in')
         ->markdown('emails.contactdetailmail')->with('details' , $this->data);

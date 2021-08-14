@@ -90,9 +90,5 @@ class PagesController extends Controller
             ->back();
 
         
-        
-
-
-
     }
 }

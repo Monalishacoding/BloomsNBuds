@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-3 mb-4">
                 <div class="footer-logo mb-2">
-                    <img src="/assets/images/logo.png" width="120px" alt="Blooms n Buds">
+                    <img src="/assets/images/logo-official.png" width="180px" alt="Blooms n Buds">
                 </div>
                 <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, doloremque ab?
                     Quos, iure temporibus, beatae doloremque nostrum unde maxime, magnam dicta repellendus ipsum

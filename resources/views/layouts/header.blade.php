@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-light  main-header">
         <div class="container">
             <a class="navbar-brand" href="{{route('page.index')}}">
-                <img width="140px" src="/assets/images/logo.png" alt="{{env('APP_NAME')}}">
+                <img width="200px" src="/assets/images/logo-official.png" alt="{{env('APP_NAME')}}">
             </a>
             <button
                 class="navbar-toggler"
