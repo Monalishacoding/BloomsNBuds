@@ -7,48 +7,22 @@
     {{-- Slider --}}
     @include('layouts.slider')
 
-    
+
 
     {{-- Featured Services --}}
     <section id="ftServices" class="df-sec-top">
         <div class="container">
             <div class="boxes-container">
+
+                @foreach ($categories as $category)
                 <div class="box">
                     <a href="#" class="img-box">
-                        <img src="/assets/images/flower.png" alt="Flowers">
+                        <img src="storage/{{$category->image}}" alt="{{$category->title}}">
                     </a>
-                     <a class="my-3" href="#"> Flowers</a>
+                     <a class="my-3" href="#">{{$category->title}}</a>
                 </div>
-                <div class="box">
-                    <a href="#" class="img-box">
-                        <img src="/assets/images/cakes.png" alt="Cakes">
-                    </a>
-                    <a  class="my-3" href="#">Cakes</a>
-                </div>
-                <div class="box">
-                    <a href="#" class="img-box">
-                        <img src="/assets/images/events.png" alt="Events">
-                    </a>
-                    <a class="my-3" href="#">Events</a>
-                </div>
-                <div class="box">
-                    <a href="#" class="img-box">
-                        <img src="/assets/images/combo.png" alt="Combo">
-                    </a>
-                    <a class="my-3" href="#">Combo</a>
-                </div>
-                <div class="box">
-                    <a href="#" class="img-box">
-                        <img src="/assets/images/combo.png" alt="Combo">
-                    </a>
-                    <a class="my-3" href="#">Combo</a>
-                </div>
-                <div class="box">
-                    <a href="#" class="img-box">
-                        <img src="/assets/images/combo.png" alt="Combo">
-                    </a>
-                    <a class="my-3" href="#">Combo</a>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
+
 class CategoryController extends Controller {
 
     public function __construct()
@@ -72,8 +74,6 @@ class CategoryController extends Controller {
     // Update
     public function update($id) {
 
-
-
         request()->validate([
             'title' => 'required|unique:categories,title,'.$id,
             'short_description' => 'required',
@@ -106,13 +106,18 @@ class CategoryController extends Controller {
 
 
     public function delete($id) {
+
         $category = Category::findOrFail($id);
 
+        Storage::delete($category->image);
+
         $category->delete();
+
 
         session()->flash('success' , 'Category Deleted');
 
         return redirect()->back();
+
     }
 
 }

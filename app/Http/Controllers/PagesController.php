@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\SendContactMail;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Category;
 
 class PagesController extends Controller
 {
@@ -12,7 +13,9 @@ class PagesController extends Controller
      * Rendering Home Page
      */
     public function index() {
-        return view('index');
+
+        $categories = Category::where('status' , 1)->get();
+        return view('index' , compact('categories'));
     }
 
 
@@ -60,7 +63,7 @@ class PagesController extends Controller
 
 
         // Send Mail
-        
+
         Mail::send(new SendContactMail($validation));
 
         if(Mail::failures()) {
@@ -89,6 +92,6 @@ class PagesController extends Controller
         return redirect()
             ->back();
 
-        
+
     }
 }
