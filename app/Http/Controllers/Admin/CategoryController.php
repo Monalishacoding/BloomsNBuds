@@ -58,4 +58,61 @@ class CategoryController extends Controller {
 
     }
 
+    // Edit
+    public function edit($id) {
+
+        $category = Category::findOrFail($id);
+
+        return view('admin.categories.edit' , [
+            'category' => $category
+        ]);
+
+    }
+
+    // Update
+    public function update($id) {
+
+
+
+        request()->validate([
+            'title' => 'required|unique:categories,title,'.$id,
+            'short_description' => 'required',
+            'image' => 'mimes:jpeg,jpg,png,gif|sometimes|max:10000'
+        ]);
+
+
+        $category = Category::findOrFail($id);
+
+        $category->title = request()->title;
+        $category->short_description = request()->short_description;
+
+        // Image Processing
+        $dir = 'category/' . $category->id;
+
+        if (request()->file('image')) {
+            $category->image = request()->file('image')->store($dir);
+
+        }
+
+
+        if($category->save()) {
+            session()->flash('success' , 'Category Updated.');
+            return redirect()->route('admin.categories.index');
+        }
+
+        session()->flash('error' , 'Something went wrong.');
+        return redirect()->back();
+    }
+
+
+    public function delete($id) {
+        $category = Category::findOrFail($id);
+
+        $category->delete();
+
+        session()->flash('success' , 'Category Deleted');
+
+        return redirect()->back();
+    }
+
 }

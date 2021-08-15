@@ -19,7 +19,7 @@ use App\Models\Category;
 |
 */
 
-Route::get('/' , 
+Route::get('/' ,
     [PagesController::class , 'index'])
     ->name('page.index');
 
@@ -27,27 +27,27 @@ Route::get('/about-us',
     [PagesController::class , 'aboutUs'])
     ->name('page.about');
 
-Route::get('/contact-us' , 
+Route::get('/contact-us' ,
     [PagesController::class , 'contactUs'])
     ->name('page.contact');
 
 
-Route::post('/contact-us' , 
+Route::post('/contact-us' ,
 [PagesController::class , 'sendContactDetails'])
 ->name('send.contactus');
 
 
-Route::get('/services' , 
+Route::get('/services' ,
     [PagesController::class , 'services'])
     ->name('page.services');
 
 
 Route::get(
-    '/our-clients' , 
+    '/our-clients' ,
     [PagesController::class , 'ourClients'])
-    ->name('page.clients');  
+    ->name('page.clients');
 
-Route::post('/contact' , 
+Route::post('/contact' ,
     [PagesController::class , 'sendContactDetails'])
     ->name('send.contactus');
 
@@ -58,7 +58,7 @@ Route::post('/contact' ,
 
 // Admin
 
-Route::prefix('admin')->middleware('web')->group(function() {
+Route::prefix('admin')->group(function() {
 
     Route::get('login', [SessionController::class , 'create'])->name('admin.session.create');
 
@@ -66,7 +66,7 @@ Route::prefix('admin')->middleware('web')->group(function() {
    Route::post('/login', [SessionController::class , 'store'])->name('admin.session.store');
 
     Route::middleware('admin')->group(function () {
-        
+
         // Admin Home
         Route::get('/' , [AdminController::class , 'index'])->name('admin.dashboard.index');
 
@@ -82,6 +82,14 @@ Route::prefix('admin')->middleware('web')->group(function() {
             // Category Create
             Route::post('create', [CategoryController::class , 'store'])->name('admin.category.store');
 
+            // Category Edit
+            Route::get('edit/{id}' , [CategoryController::class , 'edit'])->name('admin.categories.edit');
+
+            Route::put('edit/{id}' , [CategoryController::class , 'update'])->name('admin.categories.update');
+
+
+            // Delete
+            Route::post('/delete/{id}', [CategoryController::class , 'delete'])->name('admin.categories.delete');
         });
     });
 

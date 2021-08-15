@@ -9,9 +9,10 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Theme style -->
   <link rel="stylesheet" href="/assets/admin/css/adminlte.min.css">
+  <link rel="stylesheet" href="/assets/admin/plugins/toastr/toastr.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -164,11 +165,12 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
       @yield('breadcrumb')
-  
+
 
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+        @include('admin.flash-messages')
           @yield('content')
 
         <!-- /.row -->
@@ -204,10 +206,36 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="/assets/plugins/jquery/jquery.min.js"></script>
+<script src="/assets/admin/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/assets/js/adminlte.min.js"></script>
+<script src="/assets/admin/js/adminlte.min.js"></script>
+<script src="/assets/admin/plugins/toastr/toastr.min.js"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+
+</script>
+
+
+
 </body>
 </html>

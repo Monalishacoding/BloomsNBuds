@@ -45,7 +45,15 @@
                   <td>{{$category->title}}</td>
                   <td>{!! '<img src="/storage/'.$category->image.'" width="60px" class="img-fluid">' !!}</td>
                   <td>{{$category->status == 1 ? 'On' : 'OFF'}}</td>
-                  <td>Actions</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <form action="{{route('admin.categories.delete' , $category->id)}}" method="POST">
+                            @csrf
+                            <input type="submit" class="btn btn-primary btn-sm" value="Delete" >
+                        </form>
+                        <a href="{{route('admin.categories.edit' , $category->id)}}" class="btn btn-primary btn-sm">Edit</a>
+                      </div>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
