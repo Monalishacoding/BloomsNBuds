@@ -51,8 +51,7 @@ Route::post('/contact' ,
     [PagesController::class , 'sendContactDetails'])
     ->name('send.contactus');
 
-
-// bholi si soorat ???
+Route::get('/{slug}' , [PagesController::class , 'category'])->name('category.page');
 
 
 

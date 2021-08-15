@@ -94,4 +94,10 @@ class PagesController extends Controller
 
 
     }
+
+
+
+    public function category($slug) {
+        return view('category');
+    }
 }

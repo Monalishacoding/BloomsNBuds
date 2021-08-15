@@ -23,6 +23,7 @@ class CreateCategoriesTable extends Migration
             $table->text('meta_description')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->text('description')->nullable();
+            $table->string('slug');
             $table->timestamps();
         });
     }

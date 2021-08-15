@@ -40,6 +40,7 @@ class CategoryController extends Controller {
             'title' => request()->title,
             'short_description' => request()->short_description,
             'status' =>request()->status == 'on'? 1 : 0,
+            'slug' => request()->title
         ]);
 
         // Image Processing

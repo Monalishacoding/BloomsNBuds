@@ -16,7 +16,7 @@
 
                 @foreach ($categories as $category)
                 <div class="box">
-                    <a href="#" class="img-box">
+                    <a href="{{route('category.page' , $category->slug)}}" class="img-box">
                         <img src="storage/{{$category->image}}" alt="{{$category->title}}">
                     </a>
                      <a class="my-3" href="#">{{$category->title}}</a>
