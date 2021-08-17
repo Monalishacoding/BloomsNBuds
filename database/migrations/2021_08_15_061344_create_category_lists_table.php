@@ -14,13 +14,13 @@ class CreateCategoryListsTable extends Migration
     public function up()
     {
         Schema::create('category_lists', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->increments('id');
             $table->string('title')->unique();
             $table->text('description')->nullable();
             $table->text('image');
             $table->boolean('status')->default(0);
             $table->integer('category_id')->unsigned();
-            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -24,11 +24,11 @@
    <div class="col-12">
        <div class="card">
            <div class="card-header d-flex justify-content-between">
-               <h6>Categories</h6>
-               <a href="{{route('admin.categoriy-list.create')}}" class="btn btn-primary btn-sm ml-auto">Create</a>
+               <h6>Categories List</h6>
+               <a href="{{route('admin.categories-list.create')}}" class="btn btn-primary btn-sm ml-auto">Create</a>
            </div>
            <div class="card-body">
-            {{-- <table class="table table-striped">
+            <table class="table table-striped">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -39,25 +39,25 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach ($categories as $category)
+                @foreach ($categorylists as $categorylist)
                 <tr>
-                  <th scope="row">{{$category->id}}</th>
-                  <td>{{$category->title}}</td>
-                  <td>{!! '<img src="/storage/'.$category->image.'" width="60px" class="img-fluid">' !!}</td>
-                  <td>{{$category->status == 1 ? 'On' : 'OFF'}}</td>
+                  <th scope="row">{{$categorylist->id}}</th>
+                  <td>{{$categorylist->title}}</td>
+                  <td>{!! '<img src="/storage/'.$categorylist->image.'" width="60px" class="img-fluid">' !!}</td>
+                  <td>{{$categorylist->status == 1 ? 'On' : 'OFF'}}</td>
                   <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <form action="{{route('admin.categories.delete' , $category->id)}}" method="POST">
+                        <form action="{{route('admin.categories-list.delete' , $categorylist->id)}}" method="POST">
                             @csrf
                             <input type="submit" class="btn btn-primary btn-sm" value="Delete" >
                         </form>
-                        <a href="{{route('admin.categories.edit' , $category->id)}}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{{route('admin.categories-list.edit' , $categorylist->id)}}" class="btn btn-primary btn-sm">Edit</a>
                       </div>
                   </td>
                 </tr>
                 @endforeach
               </tbody>
-            </table> --}}
+            </table>
            </div>
        </div>
    </div>

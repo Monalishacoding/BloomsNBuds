@@ -98,6 +98,14 @@ class PagesController extends Controller
 
 
     public function category($slug) {
-        return view('category');
+        $category = Category::with(['categoryList' => function($query) {
+            $query->where('status' , 1)->orderBy('id' , 'DESC')->get();
+        } ])->where([
+            ['slug' , $slug],
+            ['status' , 1 ]
+        ])->first();
+        return view('category' , [
+            'category' => $category
+        ]);
     }
 }

@@ -24,4 +24,8 @@ class Category extends Model
     {
         $this->attributes['slug'] = Str::slug($value , '-');
     }
+
+    public function categoryList() {
+        return $this->hasMany(CategoryList::class);
+    }
 }

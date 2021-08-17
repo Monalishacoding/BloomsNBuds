@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CategoryListController;
 use App\Http\Controllers\Auth\SessionController;
 use App\Models\Category;
-
+use App\Models\CategoryList;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,37 @@ Route::prefix('admin')->group(function() {
 
             // Delete
             Route::post('/delete/{id}', [CategoryController::class , 'delete'])->name('admin.categories.delete');
+        });
+
+        // Categories List
+        Route::prefix('categories-list' , [CategoryListController::class , 'index'])->group(function(){
+
+            //Category List Index
+            Route::get('/' , [CategoryListController::class , 'index'])
+                ->name('admin.categories-list.index');
+
+            //Category List Create
+            Route::get('/create' , [CategoryListController::class , 'create'])
+                ->name('admin.categories-list.create');
+
+
+            // Store
+            Route::post('/create' , [CategoryListController::class , 'store'])
+                ->name('admin.categories-list.store');
+
+
+
+            // Category List Edit
+            Route::get('edit/{id}' , [CategoryListController::class , 'edit'])->name('admin.categories-list.edit');
+
+            Route::put('edit/{id}' , [CategoryListController::class , 'update'])->name('admin.categories-list.update');
+
+
+            //Category List Delete
+            Route::post('/delete/{id}', [CategoryListController::class , 'delete'])->name('admin.categories-list.delete');
+
+
+
         });
     });
 
