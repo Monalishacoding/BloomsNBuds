@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CategoryListController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\SessionController;
 use App\Models\Category;
 use App\Models\CategoryList;
@@ -38,26 +39,23 @@ Route::post('/contact-us' ,
 ->name('send.contactus');
 
 
-Route::get('/services' ,
-    [PagesController::class , 'services'])
+Route::get('/services' , [PagesController::class , 'services'])
     ->name('page.services');
 
 
-Route::get(
-    '/our-clients' ,
+Route::get('/our-clients' ,
     [PagesController::class , 'ourClients'])
     ->name('page.clients');
 
-Route::post('/contact' ,
-    [PagesController::class , 'sendContactDetails'])
+Route::post('/contact' , [PagesController::class , 'sendContactDetails'])
     ->name('send.contactus');
 
-Route::get('/category/{slug}' , [PagesController::class , 'category'])->name('category.page');
+Route::get('/category/{slug}' , [PagesController::class , 'category'])
+    ->name('category.page');
 
 
 
 // Admin
-
 Route::prefix('admin')->group(function() {
 
     Route::get('login', [SessionController::class , 'create'])->name('admin.session.create');
@@ -67,6 +65,8 @@ Route::prefix('admin')->group(function() {
 
     Route::middleware('admin')->group(function () {
 
+        Route::get('logout' , [SessionController::class , 'destroy'])   ->name('admin.logout');
+
         // Admin Home
         Route::get('/' , [AdminController::class , 'index'])->name('admin.dashboard.index');
 
@@ -75,7 +75,6 @@ Route::prefix('admin')->group(function() {
 
             // Category Index
             Route::get('/' , [CategoryController::class, 'index'])->name('admin.categories.index');
-
 
             Route::get('create' , [CategoryController::class, 'create'])->name('admin.categories.create');
 
@@ -108,8 +107,6 @@ Route::prefix('admin')->group(function() {
             Route::post('/create' , [CategoryListController::class , 'store'])
                 ->name('admin.categories-list.store');
 
-
-
             // Category List Edit
             Route::get('edit/{id}' , [CategoryListController::class , 'edit'])->name('admin.categories-list.edit');
 
@@ -122,7 +119,16 @@ Route::prefix('admin')->group(function() {
 
 
         });
+
+        // Settings
+        Route::get('settings' , [SettingsController::class , 'index'])  ->name('admin.settings.index');
+
+
     });
 
+    // Settings
+    Route::prefix('settings')->group(function(){
+        Route::get('/' , [SettingsController::class , 'index'])->name('admin.settings.index');
+    });
 
 });

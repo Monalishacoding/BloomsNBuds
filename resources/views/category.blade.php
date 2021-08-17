@@ -24,12 +24,10 @@
                             </div>
                         </a>
                     </div>
-
                 @empty
                 <div class="text-center">
                     No Result Found
                 </div>
-
                 @endforelse
             </div>
         </div>
