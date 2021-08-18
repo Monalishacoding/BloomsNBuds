@@ -30,7 +30,7 @@
         <a href="{{route('page.index')}}" class="nav-link">Website</a>
       </li>
     </ul>
-
+    
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
@@ -78,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('')}}" class="nav-link">
+            <a href="" class="nav-link">
                 <i class="nav-icon fas fa-cog"></i>
                 <p>Settings</p>
             </a>
