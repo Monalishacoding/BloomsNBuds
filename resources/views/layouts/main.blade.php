@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/style-v1.39.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/css/lightbox.css">
 </head>
 
-<body> 
+<body>
 
     @include('layouts.header')
     @yield('body')
@@ -42,6 +42,8 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javscript" src="/assets/js/script.js"></script>
     <script>
+
+
         $(window).scroll(function() {
             var sticky = $('.main-header'),
                 scroll = $(window).scrollTop();

@@ -34,15 +34,15 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    <li class="nav-item px-3">
+                    <li class="nav-item">
                         <a class="nav-link {{Route::is('/')}}" aria-current="page" href="{{ route('page.index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="{{route('page.about')}}">About</a>
+                        <a class="nav-link" href="{{route('page.about')}}">About</a>
                     </li>
-                    <li class="nav-item px-3 dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" d="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" href="{{route('page.services')}}">Services</a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <ul class="dropdown-menu dropdown-menu-light border-0" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li>
                                 <a class="dropdown-item" href="#">Action</a>
                             </li>
@@ -51,7 +51,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item px-3">
+                    <li class="nav-item ">
                         <a class="nav-link" href="{{route('page.contact')}}">Contact Us</a>
                     </li>
                 </ul>

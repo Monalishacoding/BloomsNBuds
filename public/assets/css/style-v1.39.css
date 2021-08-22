@@ -48,7 +48,9 @@ body {
 .theme-s {
     color: var(--secondary-color);
 }
-
+.breadcrumb {
+    padding: 16px 0 !important;
+}
 
 .breadcrumb-list {
     display: flex;
@@ -812,11 +814,11 @@ padding: 5rem !important; }
 }
 
 
-.card:hover .card-image a img {   
+.card:hover .card-image a img {
     transform: scale(1.2);
-} 
+}
 
-.card .card-image img {    
+.card .card-image img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
@@ -1143,4 +1145,43 @@ padding: 5rem !important; }
 .card-testimonial .ftr .card-avatar {
     margin-top: 10px;
     margin-bottom: -50px;
+}
+
+
+.navbar {
+    padding-top: 0 !important ;
+    padding-bottom: 0 !important;
+}
+
+.nav-link {
+    padding: 1.6rem 2rem !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+.dropdown-menu li a {
+    padding: 14px 10px;
+}
+
+
+.breadcrumb ol li a {
+    text-decoration: none !important;
+}
+
+.breadcrumb ol li a {
+    font-size: 12px;
+    font-family: 'Comfortaa';
+    font-weight: bold !important;
 }
