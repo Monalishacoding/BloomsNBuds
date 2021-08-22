@@ -4,7 +4,7 @@
 
 @section('body')
 <div class="container my-3">
-    <nav>
+    <nav class="breadcrumb">
         <ol class="breadcrumb-list">
             <li class="breadcrumb-item"><a href="{{route('page.index')}}">Home</a></li>
             <li class="breadcrumb-item active">Our Services</li>

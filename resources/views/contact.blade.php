@@ -2,7 +2,7 @@
 @section('title') Contact Us @endsection
 @section('body')
     <div class="container my-3">
-        <nav>
+        <nav class="breadcrumb">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="{{ route('page.index') }}">Home</a></li>
                 <li class="breadcrumb-item active">Contact Us</li>
@@ -24,7 +24,7 @@
                 <div class="col-md-6">
                     <div class="p-6 bg-light h-100">
                         <h3>Complete the form below. We will respond as soon as possible.</h3>
-                        
+
                         @if ($succ = session('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             <strong>{{ $succ }}</strong>.
@@ -34,7 +34,7 @@
 
 
                         @if ($err = session('cterrs'))
-                        
+
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             <strong>{{ $err }}</strong>.
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -51,7 +51,7 @@
                                     @enderror
                             </div>
                             <div class="form-group mb-3 col-lg-6">
-                                <input type="text" class="form-control" 
+                                <input type="text" class="form-control"
                                 value="{{old('lastname')}}"id="ctformFrinlastname" name="lastname"
                                     placeholder="Last Name">
                                     @error('lastname')

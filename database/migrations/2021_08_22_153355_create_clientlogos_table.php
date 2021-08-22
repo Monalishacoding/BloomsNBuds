@@ -14,7 +14,10 @@ class CreateClientlogosTable extends Migration
     public function up()
     {
         Schema::create('clientlogos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('title');
+            $table->text('image')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
