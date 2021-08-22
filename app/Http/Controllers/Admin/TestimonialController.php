@@ -86,6 +86,8 @@ class TestimonialController extends Controller {
         $testimonial = Testimonial::findOrFail($id);
 
         $testimonial->title = request()->title;
+        $testimonial->designation = request()->designation;
+        $testimonial->company_name = request()->company_name;
         $testimonial->feedback = request()->feedback;
         $testimonial->status = request()->status == 'on'? 1 : 0;
 
