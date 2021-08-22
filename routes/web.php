@@ -7,9 +7,11 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\CategoryListController;
 use App\Http\Controllers\Admin\SettingsController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Auth\SessionController;
 use App\Models\Category;
 use App\Models\CategoryList;
+use App\Models\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,8 +123,8 @@ Route::prefix('admin')->group(function() {
 
         });
 
-         // Gallery
-         Route::prefix('galleries')->group(function(){
+        // Gallery
+        Route::prefix('galleries')->group(function(){
 
             // Category Index
             Route::get('/' , [GalleryController::class, 'index'])->name('admin.galleries.index');
@@ -140,6 +142,28 @@ Route::prefix('admin')->group(function() {
 
             // Delete
             Route::post('/delete/{id}', [GalleryController::class , 'delete'])->name('admin.galleries.delete');
+        });
+
+
+        // Testimonials
+        Route::prefix('testimonials')->group(function(){
+
+            // Testimonials Index
+            Route::get('/' , [TestimonialController::class, 'index'])->name('admin.testimonials.index');
+
+            Route::get('create' , [TestimonialController::class, 'create'])->name('admin.testimonials.create');
+
+            // Category Create
+            Route::post('create', [TestimonialController::class , 'store'])->name('admin.testimonial.store');
+
+            // Category Edit
+            Route::get('edit/{id}' , [TestimonialController::class , 'edit'])->name('admin.testimonials.edit');
+
+            Route::put('edit/{id}' , [TestimonialController::class , 'update'])->name('admin.testimonials.update');
+
+
+            // Delete
+            Route::post('/delete/{id}', [TestimonialController::class , 'delete'])->name('admin.testimonials.delete');
         });
 
         // Settings

@@ -17,6 +17,7 @@ class CreateTestimonialsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('designation')->nullable();
+            $table->string('image')->nullable();
             $table->string('company_name')->nullable();
             $table->text('feedback')->nullable();
             $table->boolean('status')->default(0);

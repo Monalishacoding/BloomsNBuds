@@ -78,6 +78,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{route('admin.testimonials.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Testimonials
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('admin.categories-list.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
