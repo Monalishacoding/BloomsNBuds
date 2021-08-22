@@ -7,6 +7,7 @@ use App\Mail\SendContactMail;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Category;
 use App\Models\Gallery;
+use App\Models\Testimonial;
 
 class PagesController extends Controller
 {
@@ -17,7 +18,8 @@ class PagesController extends Controller
 
         $categories = Category::where('status' , 1)->get();
         $galleries =  Gallery::where('is_featured' , 1)->where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
-        return view('index' , compact('categories' , 'galleries'));
+        $testimonials =  Testimonial::where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
+        return view('index' , compact('categories' , 'galleries' , 'testimonials'));
     }
 
 

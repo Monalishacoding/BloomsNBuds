@@ -78,7 +78,9 @@
         </div>
     </section>
 
-    @include('layouts.testimonials')
+    @include('layouts.testimonials' , [
+        'testimonials' => $testimonials
+    ])
 
     @include('layouts.clients-logo')
 

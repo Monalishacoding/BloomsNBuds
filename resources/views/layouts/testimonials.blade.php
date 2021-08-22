@@ -2,65 +2,20 @@
     <div class="container">
         <div class="row testimonial-slider">
 
-            <div class="col-md-4">
-                <div class="tst-box">
-                    <div class="pp-box">
-                        <img src="/assets/images/tst.jpeg" alt="Testimonial">
-                    </div>
-                    <div class="det-box">
-                        <h4>Your name</h4>
-                        <h6>Designation / Company </h6>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore, quisquam autem nulla
-                            in labore reprehenderit? Itaque cupiditate qui reprehenderit in adipisci sit exercitationem
-                            commodi.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="tst-box">
-                    <div class="pp-box">
-                        <img src="/assets/images/tst.jpeg" alt="Testimonial">
-                    </div>
-                    <div class="det-box">
-                        <h4>Your name</h4>
-                        <h6>Designation / Company </h6>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore, quisquam autem nulla
-                            in labore reprehenderit? Itaque cupiditate qui reprehenderit in adipisci sit exercitationem
-                            commodi.</p>
+            @foreach ($testimonials as $testimonial)
+                <div class="col-md-4">
+                    <div class="tst-box">
+                        <div class="pp-box">
+                            <img src="/storage/{{$testimonial->image}}" alt="{{$testimonial->title}}">
+                        </div>
+                        <div class="det-box">
+                            <h4>{{ucfirst($testimonial->title)}}</h4>
+                            <h6>{{$testimonial->designation}} / {{$testimonial->company_name}} </h6>
+                            <p>{{$testimonial->feedback}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="tst-box">
-                    <div class="pp-box">
-                        <img src="/assets/images/tst.jpeg" alt="Testimonial">
-                    </div>
-                    <div class="det-box">
-                        <h4>Your name</h4>
-                        <h6>Designation / Company </h6>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore, quisquam autem nulla
-                            in labore reprehenderit? Itaque cupiditate qui reprehenderit in adipisci sit exercitationem
-                            commodi.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="tst-box">
-                    <div class="pp-box">
-                        <img src="/assets/images/tst.jpeg" alt="Testimonial">
-                    </div>
-                    <div class="det-box">
-                        <h4>Your name</h4>
-                        <h6>Designation / Company </h6>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore, quisquam autem nulla
-                            in labore reprehenderit? Itaque cupiditate qui reprehenderit in adipisci sit exercitationem
-                            commodi.</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>
