@@ -35,27 +35,21 @@
                 <P></P>
             </div>
             <div class="row gallery-container">
-                @for ($i = 0; $i < 8; $i++)
-                    <div class="col-md-3 mb-4">
-                        <a
-                            href="/assets/images/combo.png"
-                            data-lightbox="image-{{$i}}"
-                            data-title="Combo"
-                            class="box">
-                            <img  src="/assets/images/combo.png" alt="Combo">
-                        </a>
-                    </div>
-                @endfor
+
+                @foreach ($galleries as $gallery)
+                <div class="col-md-3 mb-4">
+                    <a
+                        href="/storage/{{$gallery->image}}"
+                        data-lightbox="{{$gallery->id}}"
+                        data-title="{{$gallery->title}}"
+                        class="box">
+                        <img  src="/storage/{{$gallery->image}}" alt="{{$gallery->title}}">
+                    </a>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>
-
-    {{-- Why us --}}
-    {{-- <section id="whyUs" >
-        <div class="container">
-
-        </div>
-    </section> --}}
 
     <section id="whyUs" class="df-sec">
         <div class="container-fluid p-0">

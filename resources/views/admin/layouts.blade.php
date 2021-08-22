@@ -30,7 +30,7 @@
         <a href="{{route('page.index')}}" class="nav-link">Website</a>
       </li>
     </ul>
-    
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
@@ -66,6 +66,14 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Categories
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('admin.galleries.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Galleries
               </p>
             </a>
           </li>

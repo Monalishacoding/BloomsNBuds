@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\CategoryListController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\SessionController;
@@ -118,6 +119,27 @@ Route::prefix('admin')->group(function() {
 
 
 
+        });
+
+         // Gallery
+         Route::prefix('galleries')->group(function(){
+
+            // Category Index
+            Route::get('/' , [GalleryController::class, 'index'])->name('admin.galleries.index');
+
+            Route::get('create' , [GalleryController::class, 'create'])->name('admin.galleries.create');
+
+            // Category Create
+            Route::post('create', [GalleryController::class , 'store'])->name('admin.gallery.store');
+
+            // Category Edit
+            Route::get('edit/{id}' , [GalleryController::class , 'edit'])->name('admin.galleries.edit');
+
+            Route::put('edit/{id}' , [GalleryController::class , 'update'])->name('admin.galleries.update');
+
+
+            // Delete
+            Route::post('/delete/{id}', [GalleryController::class , 'delete'])->name('admin.galleries.delete');
         });
 
         // Settings

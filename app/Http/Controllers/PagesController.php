@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\SendContactMail;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Category;
+use App\Models\Gallery;
 
 class PagesController extends Controller
 {
@@ -15,7 +16,8 @@ class PagesController extends Controller
     public function index() {
 
         $categories = Category::where('status' , 1)->get();
-        return view('index' , compact('categories'));
+        $galleries =  Gallery::where('is_featured' , 1)->where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
+        return view('index' , compact('categories' , 'galleries'));
     }
 
 
