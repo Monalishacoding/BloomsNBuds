@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-light  main-header">
         <div class="container">
             <a class="navbar-brand" href="{{route('page.index')}}">
-                <img width="200px" src="/assets/images/logo-official.png" alt="{{env('APP_NAME')}}">
+                <img width="200px" src="/assets/images/logo-final.png" alt="{{env('APP_NAME')}}">
             </a>
             <button
                 class="navbar-toggler"
@@ -40,12 +40,17 @@
                     <li class="nav-item">
                         <a class="nav-link px-3" href="{{route('page.about')}}">About</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="{{route('page.services')}}">Services</a>
+                    <li class="nav-item px-3 dropdown">
+                        <a class="nav-link dropdown-toggle" d="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" href="{{route('page.services')}}">Services</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </li>
+                        </ul>
                     </li>
-                    {{-- <li class="nav-item px-3">
-                        <a class="nav-link" href="{{route('page.clients')}}">Clients</a>
-                    </li> --}}
                     <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('page.contact')}}">Contact Us</a>
                     </li>

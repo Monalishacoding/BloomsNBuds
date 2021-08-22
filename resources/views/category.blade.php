@@ -9,21 +9,26 @@
             </ol>
         </nav>
     </div>
-    <section id="abt-us" class="my-5">
+    <section id="abt-us" class="my-5 cards-2 section-gray">
         <div class="container">
             <div class="row">
                 @forelse ($category->categoryList as $list)
-                    <div class="col-md-3">
-                        <a href="/storage/{{$list->image}}"
-                            data-lightbox="image-{{$list->id}}"
-                            data-title="{{$list->title}}"
-                            class="card">
-                            <img src="/storage/{{$list->image}}" alt="">
-                            <div class="card-body text-center">
-                                <h4 class="card-title nav-link ">{{$list->title}}</h4>
-                            </div>
-                        </a>
+                <div class="col-md-3">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a 
+                                data-lightbox="image-{{$list->id}}" 
+                                href="/storage/{{$list->image}}"
+                                data-title="{{$list->title}}"
+                                > 
+                                <img class="img img-raised" src="/storage/{{$list->image}}"> </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="table">
+                            <h5 class="category text-info">{{$list->title}}</h5>
+                        </div>
                     </div>
+                </div>
                 @empty
                 <div class="text-center">
                     No Result Found
