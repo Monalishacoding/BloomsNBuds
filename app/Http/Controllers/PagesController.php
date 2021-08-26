@@ -47,7 +47,7 @@ class PagesController extends Controller
     }
 
     /**
-     * Rendering Services Page
+     * Rendering Our Clients Page
      */
     public function ourClients() {
         return view('clients');
@@ -101,7 +101,9 @@ class PagesController extends Controller
     }
 
 
-
+    /**
+     * Category Page
+     */
     public function category($slug) {
         $category = Category::with(['categoryList' => function($query) {
             $query->where('status' , 1)->orderBy('id' , 'DESC')->get();
