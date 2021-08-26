@@ -27,7 +27,8 @@ class PagesController extends Controller
      * Rendering About Page
      */
     public function aboutUs() {
-        return view('about');
+        $testimonials =  Testimonial::where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
+        return view('about' , compact('testimonials'));
     }
 
 
