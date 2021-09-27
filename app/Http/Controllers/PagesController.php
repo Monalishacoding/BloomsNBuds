@@ -11,6 +11,7 @@ use App\Models\Testimonial;
 
 class PagesController extends Controller
 {
+
     /**
      * Rendering Home Page
      */
