@@ -3,13 +3,24 @@
 @section('title') Our Services @endsection
 
 @section('body')
-<div class="container my-3">
-    <nav class="breadcrumb">
-        <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="{{route('page.index')}}">Home</a></li>
-            <li class="breadcrumb-item active">Our Services</li>
-        </ol>
-    </nav>
+<div class="blm-page-title-row" style="  background: linear-gradient(0deg, rgb(0 0 0 / 43%), rgb(0 0 0 / 60%)), url(/assets/images/events.jpg);">
+    <div class="blm-page-title-row-inner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="page-title-heading">
+                        <h2 class="title">About Us</h2>
+                    </div>
+                    <div class="breadcrumb-wrapper">
+                        <span>
+                            <a title="Homepage" href="#">Home</a>
+                        </span>
+                        <span>About Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {{-- Services --}}
