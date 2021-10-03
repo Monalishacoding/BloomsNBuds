@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
     <link rel="stylesheet" href="/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/style-v1.40.css">
+    <link rel="stylesheet" href="/assets/css/style-v1.41.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="/assets/css/slick-theme.css">
