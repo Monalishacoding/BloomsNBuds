@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/css/style-v1.40.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -42,6 +44,63 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javscript" src="/assets/js/script.js"></script>
     <script>
+
+var menu = {
+    initialize: function() {
+        this.Menuhover();
+    },
+
+    Menuhover : function(){
+        var getNav = $("nav.main-menu"),
+            getWindow = $(window).width(),
+            getHeight = $(window).height(),
+            getIn = getNav.find("ul.menu").data("in"),
+            getOut = getNav.find("ul.menu").data("out");
+
+        if ( matchMedia( 'only screen and (max-width: 1200px)' ).matches ) {
+
+            // Enable click event
+            $("nav.main-menu ul.menu").each(function(){
+
+                // Dropdown Fade Toggle
+                $("a.mega-menu-link", this).on('click', function (e) {
+                    e.preventDefault();
+                    var t = $(this);
+                    t.toggleClass('active').next('ul').toggleClass('active');
+                });
+                 // Megamenu style
+                $(".megamenu-fw", this).each(function(){
+                    $(".col-menu", this).each(function(){
+                        $(".title", this).off("click");
+                        $(".title", this).on("click", function(){
+                            $(this).closest(".col-menu").find(".menu-col").stop().toggleClass('active');
+                            $(this).closest(".col-menu").toggleClass("active");
+                            return false;
+                            e.preventDefault();
+
+                        });
+
+                    });
+                });
+            });
+        }
+    },
+};
+
+
+$('.btn-show-menu-mobile').on('click', function(e){
+    $(this).toggleClass('is-active');
+    $('.menu-mobile').toggleClass('show');
+    return false;
+    e.preventDefault();
+});
+
+// Initialize
+$(document).ready(function(){
+    menu.initialize();
+
+});
+
 
 
         $(window).scroll(function() {

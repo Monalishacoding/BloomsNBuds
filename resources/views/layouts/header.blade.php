@@ -19,42 +19,49 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light  main-header">
-        <div class="container">
+        <div class="container d-flex">
             <a class="navbar-brand" href="{{route('page.index')}}">
                 <img width="200px" src="/assets/images/logo-final.png" alt="{{env('APP_NAME')}}">
             </a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {{Route::is('/')}}" aria-current="page" href="{{ route('page.index') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('page.about')}}">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" d="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" href="{{route('page.services')}}">Services</a>
-                        <ul class="dropdown-menu dropdown-menu-light border-0" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="{{route('page.contact')}}">Contact Us</a>
-                    </li>
-                </ul>
+            <div class="d-flex flex-row ">
+                <div class="btn-show-menu-mobile menubar menubar--squeeze">
+                    <span class="menubar-box">
+                        <span class="menubar-inner"></span>
+                    </span>
+                </div>
+                <!-- menu -->
+                <nav class="main-menu menu-mobile" id="menu">
+                    <ul class="menu">
+                        <li class="mega-menu-item">
+                            <a href="" class="mega-menu-link" {{ route('page.index') }}>Home</a>
+                        </li>
+                        <li class="mega-menu-item">
+                            <a class="mega-menu-link" href="{{route('page.about')}}">About</a>
+                        </li>
+                        <li class="mega-menu-item ic">
+                            <a href="#" class="mega-menu-link ic">Services</a>
+                            <ul class="mega-submenu active">
+                                <li><a href="">Exclusive Flower Bouquet</a></li>
+                                <li><a href="">Baskets</a></li>
+                                <li class="mega-menu-item">
+                                    <a href="#" class="mega-menu-link">Events</a>
+                                    <ul class="mega-submenu">
+                                        <li><a href="">Car Decoration</a></li>
+                                        <li><a href="">Mehendi</a></li>
+                                        <li><a href="">Wedding Events</a></li>
+                                        <li><a href="">Corporate Events</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mega-menu-item">
+                            <a href="#" class="mega-menu-link">Gallery</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_btn">
+                <a class="btn btn-primary py-3" href="{{route('page.contact')}}">Contact Us</a>
             </div>
         </div>
     </nav>
