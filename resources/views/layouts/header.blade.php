@@ -10,7 +10,7 @@
                     </div>
                     <div class="d-inline-block py-1">
                         <ul class="list-unstyled">
-                            <li><a href="">Careers</a></li>
+                            <li><a href=""><i class="fa fa-phone me-2 fa-flip-horizontal theme-s"></i> +91-9776789933</a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <nav class="main-menu menu-mobile" id="menu">
                     <ul class="menu">
                         <li class="mega-menu-item">
-                            <a href="" class="mega-menu-link" {{ route('page.index') }}>Home</a>
+                            <a href="{{ route('page.index') }}" class="mega-menu-link" >Home</a>
                         </li>
                         <li class="mega-menu-item">
                             <a class="mega-menu-link" href="{{route('page.about')}}">About</a>

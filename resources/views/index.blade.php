@@ -61,15 +61,8 @@
                 <div class="wrapper ">
                     <h2>Why Us</h3>
                         <ul class="list list-unstyled mb-4 mb-md-5">
-                            <li class="d-flex"><i class="fas fa-check pe-2 pt-1 text-white"></i><span>To get customizable, functional and  smart website.</span></li>
-                            <li class="d-flex"><i class="fas fa-check pe-2 pt-1 text-white"></i><span>Search engine friendly designs
-                            </span></li>
-                            <li class="d-flex"><i class="fas fa-check pe-2 pt-1 text-white"></i><span>Industry specific websites to match the committed standards.
-                            </span></li>
-                            <li class="d-flex"><i class="fas fa-check pe-2 pt-1 text-white"></i><span>Easy navigation and user friendly design.
-                            </span></li>
-                            <li class="d-flex"><i class="fas fa-check pe-2 pt-1 text-white"></i><span>Create a great user experience.
-                            </span></li>
+                            <li class="d-flex">Populaiton say that we have gotten 30 years older but our creative bells  are growing younger with each passing day. Inspired by the current trends, we keep coming up with new floral arrangements & gifts for almost every emotion, celebration and occasion. With our aim to ‘wow’ our customers and delivering smiles, we have added a little something that goes into making every 'delivery' special. We understand the importance of delivering the gifts on time or before time therefore we deliver flowers, flower baskets and other items at the doorstep of your loved ones with lightning speed in the shortest possible time - as fast as 1 Hours of ordering. This helps us to deliver fresh flowers every time you order a bouquet. We are committed to exceed your expectations whenever you order for a simple bouquet of flowers or an exquisite flower arrangement of exotic flowers. We understand the surprise element and emotional connection to the order and hence strive hard to deliver it with love and care.</li>
+                           
                         </ul>
                     <a href="{{route('page.contact')}}" class="btn btn-primary btn-block ctbtn-s">Contact Us <i class="fas fa-arrow-right ps-2"></i></a>
                 </div>
