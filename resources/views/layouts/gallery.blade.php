@@ -29,20 +29,16 @@
         </h2>
       
     </div>
-    <div class="row tm-mb-90 tm-gallery">
+
+    <div class="masonry">
+
         @foreach ($galleries as $gallery)
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                <figure class="effect-ming tm-video-item">
-                    <img src="/storage/{{$gallery->image}}" alt="{{$gallery->title}}" class="img-fluid">    
-                </figure>
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span class="tm-text-gray-light">{{$gallery->created_at->diffForHumans()}}</span>
-                    <span>{{$gallery->title}}</span>
-                </div>
-            </div>
+        <div class="mItem">
+            <img src="/storage/{{$gallery->image}}">
+          </div>
         @endforeach
-              
-    </div> <!-- row -->
+    </div>
+
    
 </div> <!-- container-fluid, tm-container-content -->
 
