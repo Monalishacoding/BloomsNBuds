@@ -22,7 +22,7 @@
 </div>
 
 
-<div class="container-fluid tm-container-content tm-mt-60">
+<div class="container-fluid tm-container-content tm-mt-60" style="margin-top: 30px;">
     <div class="row mb-4">
         <h2 class="col-6 tm-text-primary">
             Latest Photos
