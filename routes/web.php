@@ -56,6 +56,8 @@ Route::post('/contact' , [PagesController::class , 'sendContactDetails'])
 Route::get('/category/{slug}' , [PagesController::class , 'category'])
     ->name('category.page');
 
+Route::get('/gallery' , [PagesController::class , 'gallery'])
+    ->name('page.gallery');
 
 
 // Admin

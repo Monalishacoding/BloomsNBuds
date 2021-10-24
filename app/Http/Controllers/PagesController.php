@@ -116,4 +116,13 @@ class PagesController extends Controller
             'category' => $category
         ]);
     }
+
+
+    public function gallery() {
+        $galleries =  Gallery::where('is_featured' , 1)
+            ->where('status' , 1)
+            ->orderBy('id' , 'DESC')
+            ->limit(8)->get();
+        return view('layouts.gallery' , compact('galleries'));
+    }
 }

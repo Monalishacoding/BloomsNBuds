@@ -55,7 +55,10 @@
                             </ul>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="#" class="mega-menu-link">Gallery</a>
+                            <a 
+                                href="{{route('page.gallery')}}" 
+                                class="mega-menu-link"
+                            >Gallery</a>
                         </li>
                     </ul>
                 </nav>
