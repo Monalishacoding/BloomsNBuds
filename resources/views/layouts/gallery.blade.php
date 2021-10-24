@@ -30,8 +30,7 @@
       
     </div>
 
-    <div class="masonry">
-
+    <div class="masonry" style="margin-bottom: 30px;">
         @foreach ($galleries as $gallery)
         <div class="mItem">
             <img src="/storage/{{$gallery->image}}">
@@ -39,8 +38,6 @@
         @endforeach
     </div>
 
-   
-</div> <!-- container-fluid, tm-container-content -->
-
+</div>
 
 @endsection
