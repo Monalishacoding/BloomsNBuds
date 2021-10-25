@@ -42,14 +42,17 @@
                             <a href="#" class="mega-menu-link ic">Services</a>
                             <ul class="mega-submenu active">
                                 <li><a href="">Exclusive Flower Bouquet</a></li>
-                                <li><a href="">Baskets</a></li>
+                                <li><a href="">Garlands</a></li>
+                                <li><a href="">Car Decoration</a></li>
+                                <li><a href="">Cakes</a></li>
+                                <li><a href="">Plants</a></li>
                                 <li class="mega-menu-item">
                                     <a href="#" class="mega-menu-link">Events</a>
                                     <ul class="mega-submenu">
-                                        <li><a href="">Car Decoration</a></li>
-                                        <li><a href="">Mehendi</a></li>
                                         <li><a href="">Wedding Events</a></li>
                                         <li><a href="">Corporate Events</a></li>
+                                        <li><a href="">Birthday Parties</a></li>
+                                        <li><a href="">Funeral Ceremonies</a></li>
                                     </ul>
                                 </li>
                             </ul>
