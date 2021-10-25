@@ -33,10 +33,10 @@
                 <nav class="main-menu menu-mobile" id="menu">
                     <ul class="menu">
                         <li class="mega-menu-item">
-                            <a href="{{ route('page.index') }}" class="mega-menu-link" >Home</a>
+                            <a href="{{ route('page.index') }}"  >Home</a>
                         </li>
                         <li class="mega-menu-item">
-                            <a class="mega-menu-link" href="{{route('page.about')}}">About</a>
+                            <a  href="{{route('page.about')}}">About</a>
                         </li>
                         <li class="mega-menu-item ic">
                             <a href="#" class="mega-menu-link ic">Services</a>
@@ -46,8 +46,8 @@
                                 <li><a href="">Car Decoration</a></li>
                                 <li><a href="">Cakes</a></li>
                                 <li><a href="">Plants</a></li>
-                                <li class="mega-menu-item">
-                                    <a href="#" class="mega-menu-link">Events</a>
+                                <li class="mega-menu-item ic">
+                                    <a href="#" >Events</a>
                                     <ul class="mega-submenu">
                                         <li><a href="">Wedding Events</a></li>
                                         <li><a href="">Corporate Events</a></li>
@@ -60,7 +60,7 @@
                         <li class="mega-menu-item">
                             <a 
                                 href="{{route('page.gallery')}}" 
-                                class="mega-menu-link"
+                                
                             >Gallery</a>
                         </li>
                     </ul>
