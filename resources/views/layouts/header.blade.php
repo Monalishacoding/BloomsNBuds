@@ -47,7 +47,7 @@
                                 <li><a href="">Cakes</a></li>
                                 <li><a href="">Plants</a></li>
                                 <li class="mega-menu-item ic">
-                                    <a href="#" >Events</a>
+                                    <a href="#" class="mega-menu-link ic">Events</a>
                                     <ul class="mega-submenu">
                                         <li><a href="">Wedding Events</a></li>
                                         <li><a href="">Corporate Events</a></li>
