@@ -81,7 +81,7 @@
         <div class="container-fluid p-0">
           <div class="row justify-content-center no-gutters">
             <div class="col-lg-6 col-md-6">
-              <iframe class="img-grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9890732362437!2d85.83720121471382!3d20.259287918975897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a74815beca63%3A0x152fa1a3a149cb47!2s28%2C%20Gautam%20Nagar%20St%2C%20Gautam%20Nagar%2C%20Bhubaneswar%2C%20Odisha%20751014!5e0!3m2!1sen!2sin!4v1635069464948!5m2!1sen!2sin" style="border:0; height:100%;" allowfullscreen=""></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9890732362437!2d85.83720121471382!3d20.259287918975897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a74815beca63%3A0x152fa1a3a149cb47!2s28%2C%20Gautam%20Nagar%20St%2C%20Gautam%20Nagar%2C%20Bhubaneswar%2C%20Odisha%20751014!5e0!3m2!1sen!2sin!4v1635069464948!5m2!1sen!2sin" style="border:0; height:100%;" allowfullscreen=""></iframe>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
               <div class="p-6 bg-light h-100">
