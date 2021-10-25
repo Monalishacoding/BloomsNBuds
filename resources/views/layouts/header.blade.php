@@ -10,7 +10,7 @@
                     </div>
                     <div class="d-inline-block py-1">
                         <ul class="list-unstyled">
-                            <li><a href=""><i class="fa fa-phone me-2 fa-flip-horizontal theme-s"></i> +91-9776789933</a></li>
+                            <li><a  href="https://wa.me/{{ env('WP_NUMB') }}"><i class="fab fa-whatsapp fa-lg me-2 fa-flip-horizontal theme-s"></i> +91-9776789933</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,6 +62,9 @@
                                 href="{{route('page.gallery')}}" 
                                 
                             >Gallery</a>
+                        </li>
+                        <li class="mega-menu-item ct-m">
+                            <a href="{{route('page.contact')}}">Contact us</a>
                         </li>
                     </ul>
                 </nav>

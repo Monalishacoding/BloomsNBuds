@@ -65,8 +65,8 @@
                     settings: {
                         arrows: false,
                         centerMode: false,
-                        // centerPadding: '40px',
-                        slidesToShow: 2
+                        centerPadding: '40px',
+                        slidesToShow: 1
                     }
                 }
             ]

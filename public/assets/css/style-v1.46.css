@@ -2101,4 +2101,14 @@ width: 100%;
         column-count: 1;
     }
 }
-  
+
+.ct-m {
+    display: none !important;
+}
+
+
+@media (max-width:900px) {
+    .ct-m {
+        display: block !important;
+    }
+}

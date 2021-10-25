@@ -5,7 +5,7 @@
                 <div class="footer-logo mb-2">
                     <img src="/assets/images/logo-final.png" width="180px" alt="Blooms n Buds">
                 </div>
-                <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, doloremque ab?
+                <p class="footer-para text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, doloremque ab?
                     Quos, iure temporibus, beatae doloremque nostrum unde maxime, magnam dicta repellendus ipsum
                     consequatur veniam? Delectus cum quis id qui?</p>
                 <ul class="list-unstyled mb-0 social-icon">
@@ -29,7 +29,8 @@
                 <ul class="footer-links d-flex flex-column align-items-center">
                     <li><a href="#">Exotic Flowers</a></li>
                     <li><a href="#">Hand Boquets</a></li>
-                    <li><a href="#">Podium Arrangements</a></li>
+                    <li><a href="#">Car Decoration</a></li>
+                    <li><a href="#">Garlands</a></li>
                     <li><a href="#">Customized Cakes</a></li>
 
                 </ul>
@@ -37,12 +38,11 @@
             <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
                 <h6>Events</h6>
                 <ul class="footer-links d-flex flex-column align-items-center">
-                    <li><a href="#">Sangeet</a></li>
-                    <li><a href="#">Marriage</a></li>
-                    <li><a href="#">Birth Day</a></li>
+            
+                    <li><a href="#">Wedding Events</a></li>
+                    <li><a href="#">Birthday Parties</a></li>
                     <li><a href="#">Office Parties</a></li>
-                    <li><a href="#">Get-to-gethers</a></li>
-                    <li><a href="#">Office Parties</a></li>
+                    <li><a href="#">Funeral Ceremonies</a></li>
 
                 </ul>
             </div>
