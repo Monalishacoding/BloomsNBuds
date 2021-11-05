@@ -125,4 +125,8 @@ class PagesController extends Controller
             ->limit(8)->get();
         return view('layouts.gallery' , compact('galleries'));
     }
+
+    public function faq() {
+        return view('faq');
+    }
 }

@@ -34,10 +34,19 @@
                 <h2 class="heading-title">Some of our Pictures</h4>
                 <P></P>
             </div>
-            <div class="row gallery-container">
+            <div class="masonry">
 
                 @foreach ($galleries as $gallery)
-                <div class="col-md-3 mb-4">
+                <div class="mItem">
+                  <a
+                  href="/storage/{{$gallery->image}}"
+                  data-lightbox="{{$gallery->id}}"
+                  data-title="{{$gallery->title}}"
+                  class="box">
+                  <img  src="/storage/{{$gallery->image}}" alt="{{$gallery->title}}">
+                  </a>
+                </div>
+                {{-- <div class="col-md-3 mb-4 ">
                     <a
                         href="/storage/{{$gallery->image}}"
                         data-lightbox="{{$gallery->id}}"
@@ -45,7 +54,7 @@
                         class="box">
                         <img  src="/storage/{{$gallery->image}}" alt="{{$gallery->title}}">
                     </a>
-                </div>
+                </div> --}}
                 @endforeach
             </div>
         </div>

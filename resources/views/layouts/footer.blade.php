@@ -22,6 +22,7 @@
                     <li><a href="{{ route('page.about') }}">About</a></li>
                     <li><a href="{{ route('page.services') }}">Services</a></li>
                     <li><a href="{{ route('page.contact') }}">Contact Us</a></li>
+                    <li><a href="{{route('page.faq')}}">F.A.Q</a></li>
                 </ul>
             </div>
             <div class="col-md-3 mb-4 d-flex flex-column align-items-center">

@@ -59,6 +59,9 @@ Route::get('/category/{slug}' , [PagesController::class , 'category'])
 Route::get('/gallery' , [PagesController::class , 'gallery'])
     ->name('page.gallery');
 
+Route::get('/faq' , [PagesController::class , 'faq'])
+    ->name('page.faq');
+
 
 // Admin
 Route::prefix('admin')->group(function() {
