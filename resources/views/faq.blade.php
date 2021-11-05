@@ -30,7 +30,7 @@
                                     aria-expanded="true" aria-controls="faq1">What if you attempt delivery and no one’s home?</a>
                                 </div>
         
-                                <div id="faq1" class="accordion-collapse" aria-labelledby="faqhead1" data-parent="#faq">
+                                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faqhead1" data-parent="#faq">
                                     <div class="card-body">
                                         We assess each delivery situation on an individual basis.  If the delivery location looks safe with a protected area to keep the bouquet shaded and away from the elements, we will leave it there and follow up with a phone call to the recipient.  If we are unable to leave it at the residence, our next step is to try to leave it with a neighbor.  If both these options are unavailable we then leave a tag on the recipients door letting them know we were by with a special delivery.  We ask that they call us to arrange a new delivery or they may come to our shop and pick up their bouquet. 
                                     </div>
