@@ -86,7 +86,7 @@
 
     @include('layouts.clients-logo')
 
-    <section class="space-pt overflow-hidden pb-4">
+    <section class="overflow-hidden pb-4">
         <div class="container-fluid p-0">
           <div class="row justify-content-center no-gutters">
             <div class="col-lg-6 col-md-6">
