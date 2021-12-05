@@ -129,4 +129,13 @@ class PagesController extends Controller
     public function faq() {
         return view('faq');
     }
+
+
+    public function garlands() {
+        return view('garlands');
+    }
+
+    public function carDecorations() {
+        return view('car_decorations');
+    }
 }

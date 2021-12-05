@@ -42,8 +42,8 @@
                             <a href="#" class="mega-menu-link ic">Services</a>
                             <ul class="mega-submenu active">
                                 <li><a href="">Exclusive Flower Bouquet</a></li>
-                                <li><a href="">Garlands</a></li>
-                                <li><a href="">Car Decoration</a></li>
+                                <li><a href="{{route('page.garland')}}">Garlands</a></li>
+                                <li><a href="{{route('page.car_decorations')}}">Car Decoration</a></li>
                                 <li><a href="">Cakes</a></li>
                                 <li><a href="">Plants</a></li>
                                 <li class="mega-menu-item ic">
