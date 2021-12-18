@@ -106,12 +106,14 @@ class PagesController extends Controller
      * Category Page
      */
     public function category($slug) {
+       
         $category = Category::with(['categoryList' => function($query) {
             $query->where('status' , 1)->orderBy('id' , 'DESC')->get();
         } ])->where([
             ['slug' , $slug],
             ['status' , 1 ]
         ])->first();
+
         return view('category' , [
             'category' => $category
         ]);

@@ -9,7 +9,18 @@
             </ol>
         </nav>
     </div>
-    <section id="abt-us" class="my-5 cards-2 section-gray">
+
+    <div class="container tm-container-content tm-mt-60" style="margin-top: 30px;">
+        <div class="masonry" style="margin-bottom: 30px;">
+            @forelse ($category->categoryList as $list)
+                <div class="mItem">
+                    <img src="/storage/{{$list->image}}">
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+    {{-- <section id="abt-us" class="my-5 cards-2 section-gray">
         <div class="container">
             <div class="row">
                 @forelse ($category->categoryList as $list)
@@ -36,6 +47,6 @@
                 @endforelse
             </div>
         </div>
-    </section>
+    </section> --}}
 
 @endsection
