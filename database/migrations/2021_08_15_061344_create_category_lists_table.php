@@ -20,7 +20,7 @@ class CreateCategoryListsTable extends Migration
             $table->text('image');
             $table->boolean('status')->default(0);
             $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

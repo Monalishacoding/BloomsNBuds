@@ -10,7 +10,7 @@
                     </div>
                     <div class="d-inline-block py-1">
                         <ul class="list-unstyled">
-                            <li><a href="">Careers</a></li>
+                            <li><a  href="https://wa.me/{{ env('WP_NUMB') }}"><i class="fab fa-whatsapp fa-lg me-2 fa-flip-horizontal theme-s"></i> +91-9776789933</a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,29 +33,38 @@
                 <nav class="main-menu menu-mobile" id="menu">
                     <ul class="menu">
                         <li class="mega-menu-item">
-                            <a href="" class="mega-menu-link" {{ route('page.index') }}>Home</a>
+                            <a href="{{ route('page.index') }}"  >Home</a>
                         </li>
                         <li class="mega-menu-item">
-                            <a class="mega-menu-link" href="{{route('page.about')}}">About</a>
+                            <a  href="{{route('page.about')}}">About</a>
                         </li>
                         <li class="mega-menu-item ic">
                             <a href="#" class="mega-menu-link ic">Services</a>
                             <ul class="mega-submenu active">
                                 <li><a href="">Exclusive Flower Bouquet</a></li>
-                                <li><a href="">Baskets</a></li>
-                                <li class="mega-menu-item">
-                                    <a href="#" class="mega-menu-link">Events</a>
+                                <li><a href="{{route('page.garland')}}">Garlands</a></li>
+                                <li><a href="{{route('page.car_decorations')}}">Car Decoration</a></li>
+                                <li><a href="">Cakes</a></li>
+                                <li><a href="">Plants</a></li>
+                                <li class="mega-menu-item ic">
+                                    <a href="#" class="mega-menu-link ic">Events</a>
                                     <ul class="mega-submenu">
-                                        <li><a href="">Car Decoration</a></li>
-                                        <li><a href="">Mehendi</a></li>
                                         <li><a href="">Wedding Events</a></li>
                                         <li><a href="">Corporate Events</a></li>
+                                        <li><a href="">Birthday Parties</a></li>
+                                        <li><a href="">Funeral Ceremonies</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="#" class="mega-menu-link">Gallery</a>
+                            <a 
+                                href="{{route('page.gallery')}}" 
+                                
+                            >Gallery</a>
+                        </li>
+                        <li class="mega-menu-item ct-m">
+                            <a href="{{route('page.contact')}}">Contact us</a>
                         </li>
                     </ul>
                 </nav>

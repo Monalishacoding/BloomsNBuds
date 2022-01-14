@@ -106,14 +106,38 @@ class PagesController extends Controller
      * Category Page
      */
     public function category($slug) {
+       
         $category = Category::with(['categoryList' => function($query) {
             $query->where('status' , 1)->orderBy('id' , 'DESC')->get();
         } ])->where([
             ['slug' , $slug],
             ['status' , 1 ]
         ])->first();
+
         return view('category' , [
             'category' => $category
         ]);
+    }
+
+
+    public function gallery() {
+        $galleries =  Gallery::where('is_featured' , 1)
+            ->where('status' , 1)
+            ->orderBy('id' , 'DESC')
+            ->limit(8)->get();
+        return view('layouts.gallery' , compact('galleries'));
+    }
+
+    public function faq() {
+        return view('faq');
+    }
+
+
+    public function garlands() {
+        return view('garlands');
+    }
+
+    public function carDecorations() {
+        return view('car_decorations');
     }
 }

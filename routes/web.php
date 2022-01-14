@@ -56,6 +56,17 @@ Route::post('/contact' , [PagesController::class , 'sendContactDetails'])
 Route::get('/category/{slug}' , [PagesController::class , 'category'])
     ->name('category.page');
 
+Route::get('/gallery' , [PagesController::class , 'gallery'])
+    ->name('page.gallery');
+
+Route::get('/faq' , [PagesController::class , 'faq'])
+    ->name('page.faq');
+
+Route::get('/garlands' , [PagesController::class, 'garlands'])
+    ->name('page.garland');
+
+Route::get('/car-decorations' , [PagesController::class, 'carDecorations'])
+->name('page.car_decorations');
 
 
 // Admin

@@ -20,6 +20,7 @@
                     <li><a href="{{ route('page.about') }}">About</a></li>
                     <li><a href="{{ route('page.services') }}">Services</a></li>
                     <li><a href="{{ route('page.contact') }}">Contact Us</a></li>
+                    <li><a href="{{route('page.faq')}}">F.A.Q</a></li>
                 </ul>
             </div>
             <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
@@ -27,7 +28,8 @@
                 <ul class="footer-links d-flex flex-column align-items-center">
                     <li><a href="#">Exotic Flowers</a></li>
                     <li><a href="#">Hand Boquets</a></li>
-                    <li><a href="#">Podium Arrangements</a></li>
+                    <li><a href="#">Car Decoration</a></li>
+                    <li><a href="#">Garlands</a></li>
                     <li><a href="#">Customized Cakes</a></li>
 
                 </ul>
@@ -35,12 +37,11 @@
             <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
                 <h6>Events</h6>
                 <ul class="footer-links d-flex flex-column align-items-center">
-                    <li><a href="#">Sangeet</a></li>
-                    <li><a href="#">Marriage</a></li>
-                    <li><a href="#">Birth Day</a></li>
+
+                    <li><a href="#">Wedding Events</a></li>
+                    <li><a href="#">Birthday Parties</a></li>
                     <li><a href="#">Office Parties</a></li>
-                    <li><a href="#">Get-to-gethers</a></li>
-                    <li><a href="#">Office Parties</a></li>
+                    <li><a href="#">Funeral Ceremonies</a></li>
 
                 </ul>
             </div>
