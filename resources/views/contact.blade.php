@@ -37,7 +37,9 @@
                     <h3>Complete the form below. We will respond as soon as possible.</h3>
 
                     @if ($succ = session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+
+                    <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>{{ $succ }}</strong>.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
@@ -46,7 +48,7 @@
 
                     @if ($err = session('cterrs'))
 
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-warning alert-dismissible fade show" role="alert">
                         <strong>{{ $err }}</strong>.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>

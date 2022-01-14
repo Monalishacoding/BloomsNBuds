@@ -5,9 +5,7 @@
                 <div class="footer-logo mb-2">
                     <img src="/assets/images/logo-final.png" width="180px" alt="Blooms n Buds">
                 </div>
-                <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, doloremque ab?
-                    Quos, iure temporibus, beatae doloremque nostrum unde maxime, magnam dicta repellendus ipsum
-                    consequatur veniam? Delectus cum quis id qui?</p>
+                <p class="footer-para">It’s been 35 years, “BloomsNBuds” under the key leadership of Jyoti Florist headed by Late Founder Mr.Bibhu Prasad Satpathy went on helping masses in Bhubaneswar to celebrate their special moments by delivering fresh flowers and fabulous gifts to their loved ones.</p>
                 <ul class="list-unstyled mb-0 social-icon">
                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://twitter.com/p"><i class="fab fa-twitter"></i></a></li>

@@ -1,5 +1,5 @@
 @component('mail::message')
-# Query Data
+# Contact Us  Data
 
 @component('mail::table')
 | Subject       | Detail        |

@@ -93,23 +93,66 @@
             <div class="col-lg-6 col-md-6 col-12">
               <div class="p-6 bg-light h-100">
                 <h3>Complete the form below. We will respond as soon as possible.</h3>
-                 <form class="mt-4 row form-white" id="ctformFrin" method="POST">
-                  <input type="hidden" name="_token" value="y57WsSChO5YsTMatFN6jsjDicNiyr3eGj8Yfd5eR">              <div class="form-group mb-3 col-lg-6">
-                    <input type="text" class="form-control" id="ctformFrinfirstname" name="firstname" placeholder="First Name">
-                  </div>
-                  <div class="form-group mb-3 col-lg-6">
-                    <input type="text" class="form-control" id="ctformFrinlastname" name="lastname" placeholder="Last Name">
-                  </div>
-                  <div class="form-group mb-3 col-12">
-                    <input type="text" class="form-control" id="ctformFrinemail" name="email" placeholder="Email Address">
-                  </div>
-                  <div class="form-group mb-4 col-12">
-                    <textarea class="form-control" id="msg" name="ctformFrinmsg" placeholder="Enquiry Description" rows="5"></textarea>
-                  </div>
-                  <div id="submMsg" class="col-12"></div>
-                  <div class="form-group mb-0 col-12">
-                    <button type="submit" class="btn btn-primary btn-block ctbtn-s">Get in Touch<i class="fas fa-arrow-right ps-2"></i></button>
-                  </div>
+
+                @if ($succ = session('success'))
+
+
+                <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ $succ }}</strong>.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+
+                @if ($err = session('cterrs'))
+
+                <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>{{ $err }}</strong>.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                <form
+                    class="mt-4 row form-white"
+                    id="ctformFrin"
+                    method="POST"
+                    action="{{route('send.contactus')}}"
+                >
+                    @csrf
+                    <div class="form-group mb-3 col-lg-6">
+                        <input type="text" class="form-control" id="ctformFrinfirstname" value="{{old('firstname')}}" name="firstname"
+                            placeholder="First Name">
+                            @error('firstname')
+                            <div class="invalid-feedback d-block">{{$message}}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group mb-3 col-lg-6">
+                        <input type="text" class="form-control"
+                        value="{{old('lastname')}}"id="ctformFrinlastname" name="lastname"
+                            placeholder="Last Name">
+                            @error('lastname')
+                            <div class="invalid-feedback d-block">{{$message}}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group mb-3 col-12">
+                        <input value="{{old('email')}}" type="text" class="form-control" id="ctformFrinemail" name="email"
+                            placeholder="Email Address">
+                            @error('email')
+                            <div class="invalid-feedback d-block">{{$message}}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group mb-4 col-12">
+                        <textarea class="form-control" id="msg" name="msg"
+                            placeholder="Enquiry Description" rows="5">{{old('msg')}}</textarea>
+                            @error('msg')
+                            <div class="invalid-feedback d-block">{{$message}}</div>
+                            @enderror
+                    </div>
+                    <div id="submMsg" class="col-12"></div>
+                    <div class="form-group mb-0 col-12">
+                        <button type="submit" class="btn btn-primary btn-block ctbtn-s">Get in Touch<i
+                                class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
                 </form>
               </div>
             </div>
