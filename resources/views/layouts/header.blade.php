@@ -1,77 +1,151 @@
-<div class="main-header border-shadow">
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                <div class="d-flex justify-content-between">
-                    <div class="me-4 d-inline-block py-1">
-                    <a class="me-3" href="mailto:wecare@bloomnbuds.in" target="_top"><i class="far fa-envelope me-2 fa-flip-horizontal theme-s"></i>wecare@bloomnbuds.in</a>
-                    <a class="me-3" href=""><i class="fas fa-map-marker-alt theme-s me-2"></i>Bhubaneswar, Odisha</a>
-                    </div>
-                    <div class="d-inline-block py-1">
-                        <ul class="list-unstyled">
-                            <li><a  href="https://wa.me/{{ env('WP_NUMB') }}"><i class="fab fa-whatsapp fa-lg me-2 fa-flip-horizontal theme-s"></i> +91-9776789933</a></li>
-                        </ul>
+<!--Header Section Start-->
+<div class="header-section d-none d-lg-block " style="border-bottom: 1px solid #eee;">
+    <div class="main-header">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="{{route('page.index')}}"><img src="/assets/images/logo-final.png"
+                                                               alt="{{env('APP_NAME')}}"></a>
                     </div>
                 </div>
+                <div class="col-lg-7 position-static">
+                    <div class="site-main-nav">
+                        <nav class="site-nav">
+                            <ul>
+                                <li><a href="{{ route('page.index') }}">Home</a></li>
+                                <li><a href="{{route('page.about')}}">About</a></li>
+                                <li><a href="{{route('page.gallery')}}">Gallery</a></li>
+
+                                <li class="menu-item-has-children">
+                                    <a href="#">Services</a>
+
+                                    <ul class="sub-menu">
+                                        <li><a href="">Exclusive Flower Bouquet</a></li>
+                                        <li><a href="{{route('page.garland')}}">Garlands</a></li>
+                                        <li><a href="{{route('page.car_decorations')}}">Car Decoration</a></li>
+                                        <li><a href="">Cakes</a></li>
+                                        <li><a href="">Plants</a></li>
+                                        <li>
+                                            <a href="#">Events</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="">Wedding Events</a></li>
+                                                <li><a href="">Corporate Events</a></li>
+                                                <li><a href="">Birthday Parties</a></li>
+                                                <li><a href="">Funeral Ceremonies</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{route('page.contact')}}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header-meta-info">
+                        <div class="header-search">
+                            <form action="#">
+                                <input type="text" placeholder="Search our store ">
+                                <button><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light  main-header">
-        <div class="container d-flex">
-            <a class="navbar-brand" href="{{route('page.index')}}">
-                <img width="200px" src="/assets/images/logo-final.png" alt="{{env('APP_NAME')}}">
-            </a>
-            <div class="d-flex flex-row ">
-                <div class="btn-show-menu-mobile menubar menubar--squeeze">
-                    <span class="menubar-box">
-                        <span class="menubar-inner"></span>
-                    </span>
+</div>
+<!--Header Section End-->
+
+
+<!--Header Mobile Start-->
+<div class="header-mobile d-lg-none">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="header-logo">
+                    <a href="index.html"><img src="/assets/images/logo-final.png" alt=""></a>
                 </div>
-                <!-- menu -->
-                <nav class="main-menu menu-mobile" id="menu">
-                    <ul class="menu">
-                        <li class="mega-menu-item">
-                            <a href="{{ route('page.index') }}"  >Home</a>
-                        </li>
-                        <li class="mega-menu-item">
-                            <a  href="{{route('page.about')}}">About</a>
-                        </li>
-                        <li class="mega-menu-item ic">
-                            <a href="#" class="mega-menu-link ic">Services</a>
-                            <ul class="mega-submenu active">
-                                <li><a href="">Exclusive Flower Bouquet</a></li>
-                                <li><a href="{{route('page.garland')}}">Garlands</a></li>
-                                <li><a href="{{route('page.car_decorations')}}">Car Decoration</a></li>
-                                <li><a href="">Cakes</a></li>
-                                <li><a href="">Plants</a></li>
-                                <li class="mega-menu-item ic">
-                                    <a href="#" class="mega-menu-link ic">Events</a>
-                                    <ul class="mega-submenu">
-                                        <li><a href="">Wedding Events</a></li>
-                                        <li><a href="">Corporate Events</a></li>
-                                        <li><a href="">Birthday Parties</a></li>
-                                        <li><a href="">Funeral Ceremonies</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mega-menu-item">
-                            <a 
-                                href="{{route('page.gallery')}}" 
-                                
-                            >Gallery</a>
-                        </li>
-                        <li class="mega-menu-item ct-m">
-                            <a href="{{route('page.contact')}}">Contact us</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
-            <div class="header_btn">
-                <a class="btn btn-primary py-3" href="{{route('page.contact')}}">Contact Us</a>
+            <div class="col-6">
+                <div class="header-meta-info">
+                    <div class="header-account">
+                        <div class="header-account-list mobile-menu-trigger">
+                            <button id="menu-trigger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 </div>
+<!--Header Mobile End-->
+
+<!--Header Mobile Menu Start-->
+<div class="header-mobile-menu d-lg-none">
+
+    <a href="javascript:void(0)" class="mobile-menu-close">
+        <span></span>
+        <span></span>
+    </a>
+
+    <div class="header-meta-info">
+        <div class="header-search">
+            <form action="#">
+                <input type="text" placeholder="Search our store ">
+                <button><i class="icon-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="site-main-nav">
+        <nav class="site-nav">
+            <ul class="navbar-mobile-wrapper">
+                <li><a href="{{ route('page.index') }}">Home</a></li>
+                <li><a href="{{route('page.about')}}">About</a></li>
+                <li><a href="{{route('page.gallery')}}">Gallery</a></li>
+                <li class="menu-item-has-children">
+                    <a href="#">Services</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="">Exclusive Flower Bouquet</a></li>
+                        <li><a href="{{route('page.garland')}}">Garlands</a></li>
+                        <li><a href="{{route('page.car_decorations')}}">Car Decoration</a></li>
+                        <li><a href="">Cakes</a></li>
+                        <li><a href="">Plants</a></li>
+                        <li>
+                            <a href="#">Events</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Wedding Events</a></li>
+                                <li><a href="">Corporate Events</a></li>
+                                <li><a href="">Birthday Parties</a></li>
+                                <li><a href="">Funeral Ceremonies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{{route('page.contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-social">
+        <ul class="social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+    </div>
+
+</div>
+<!--Header Mobile Menu End-->
+
+<div class="overlay"></div>
+<!--Overlay-->

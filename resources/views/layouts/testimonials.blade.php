@@ -1,55 +1,28 @@
-<section id="testimonials" class="df-sec">
+<!--Testimonial Start-->
+<div class="testimonial-area" style="background-image: url(/assets/images/testimonial-bg.jpg);">
     <div class="container">
-        <div class="row testimonial-slider">
+        <div class="swiper-container testimonial-active">
+            <div class="swiper-wrapper">
+                @foreach ($testimonials as $testimonial)
+                <div class="swiper-slide">
+                    <div class="single-testimonial text-center">
+                        <p>Felis eu pede mollis pretium. Nullam dictum felis eu pede mollis pretium. Integer
+                            tincidunt. Cras dapibus lingua. felis eu pede mollis pretium.</p>
 
-            @foreach ($testimonials as $testimonial)
-                <div class="col-md-4">
-                    <div class="tst-box">
-                        <div class="pp-box">
+                        <div class="testimonial-author">
                             <img src="/storage/{{$testimonial->image}}" alt="{{$testimonial->title}}">
-                        </div>
-                        <div class="det-box">
-                            <h4>{{ucfirst($testimonial->title)}}</h4>
-                            <h6>{{$testimonial->designation}} / {{$testimonial->company_name}} </h6>
-                            <p>{{$testimonial->feedback}}</p>
+                            <span class="author-name">{{$testimonial->designation}} / {{$testimonial->company_name}}</span>
                         </div>
                     </div>
                 </div>
-            @endforeach
+                @endforeach
 
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
+            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
         </div>
     </div>
-</section>
-
-@push('scripts')
-    <script type="text/javascript">
-        $('.testimonial-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true,
-            // prevArrow: '<i class="fas fa-arrow-left prevArrowCustom">',
-            //     nextArrow: '<i class="fas fa-arrow-right nextArrowCustom">'
-            responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    </script>
-@endpush
+</div>
+<!--Testimonial End-->
