@@ -48,6 +48,12 @@
             }
         }
 
+        @media (max-width:560px) {
+            .top-notification-bar {
+              display: none;
+            }
+        }
+
     </style>
     @stack('css')
 </head>
@@ -56,7 +62,7 @@
 
 <div class="main-wrapper">
     <!--Top Notification Start-->
-    <div class="top-notification-bar text-center d-md-none">
+    <div class="top-notification-bar text-center">
         <div class="container">
             <div class="row">
                 <div class="col-12">

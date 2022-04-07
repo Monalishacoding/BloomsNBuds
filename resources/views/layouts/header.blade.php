@@ -65,7 +65,7 @@
         <div class="row align-items-center">
             <div class="col-6">
                 <div class="header-logo">
-                    <a href="index.html"><img src="/assets/images/logo-final.png" alt=""></a>
+                    <a href="/"><img src="/assets/images/logo-final.png" alt=""></a>
                 </div>
             </div>
             <div class="col-6">
