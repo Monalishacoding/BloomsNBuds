@@ -5,7 +5,7 @@
     <div class="page-banner" style="background-image: url(/assets/images/abg.png);">
         <div class="container">
             <div class="page-banner-content text-center">
-                <h2 class="title">About</h2>
+                <h2 class="title">Contact</h2>
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="{{route('page.index')}}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>

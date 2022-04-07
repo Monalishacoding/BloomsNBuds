@@ -8,7 +8,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <a class="footer-logo" style="background-color: white;" href="#"><img width="180px"
-                                                                                              src="/assets/images/logo/logo-final.png" alt=""></a>
+                                                                                              src="/assets/images/logo-final.png" alt=""></a>
                         <div class="footer-widget-text">
                             <p>A perfect blend of creativity, energy, communication, happiness and love. Let us
                                 arrange a smile for you. </p>

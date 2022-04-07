@@ -11,6 +11,44 @@
     <link rel="stylesheet" href="/assets/v1/css/plugins-min/plugins.min.css">
     <link rel="stylesheet" href="/assets/v1/css/style.min.css">
     <link rel="stylesheet" href="/assets/css/lightbox.css">
+    <style>
+
+
+        .masonry {
+            /*column-count: 4;*/
+            column-count: 4;
+            column-gap: 16px;
+        }
+
+        .masonry img {
+            width: 100%;
+        }
+
+        .masonry .mItem {
+            /* display: inline-block; */
+            margin-bottom: 16px;
+            width: 100%;
+        }
+
+        @media (max-width: 1199px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .masonry {
+                column-count: 1;
+            }
+        }
+
+    </style>
     @stack('css')
 </head>
 
