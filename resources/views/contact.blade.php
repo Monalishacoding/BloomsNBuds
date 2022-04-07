@@ -52,7 +52,7 @@
                             <div class="single-contact-info text-center">
                                 <i class="fa fa-phone"></i>
                                 <h4 class="title"> Phone Number </h4>
-                                <p><a href="tel:7162981822">+91-123456790 </a></p>
+                                <p><a href="tel:7162981822">+91-9776789933 </a></p>
                             </div>
                         </div>
                         <div class="col-sm-4">

@@ -56,7 +56,7 @@
 
 <div class="main-wrapper">
     <!--Top Notification Start-->
-    <div class="top-notification-bar text-center">
+    <div class="top-notification-bar text-center d-md-none">
         <div class="container">
             <div class="row">
                 <div class="col-12">

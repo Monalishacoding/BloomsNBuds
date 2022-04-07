@@ -60,7 +60,7 @@
 
 
 <!--Header Mobile Start-->
-<div class="header-mobile d-lg-none">
+<div class="header-mobile d-lg-none"  style="border-bottom: 1px solid #eee;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-6">
