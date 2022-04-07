@@ -26,6 +26,6 @@ class Category extends Model
     }
 
     public function categoryList() {
-        return $this->hasMany(CategoryList::class);
+        return $this->hasMany(CategoryList::class );
     }
 }

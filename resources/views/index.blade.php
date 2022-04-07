@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="expert-content">
                                     <h4 class="name">{{$category->title}}</h4>
-{{--                                    <p>Category</p>--}}
+                                    {{--                                    <p>Category</p>--}}
                                 </div>
                             </a>
                         </div>
@@ -109,11 +109,12 @@
                 <div class="col-lg-6">
                     <div class="about-content">
                         <h2 class="title">For almost every emotion, celebration and occasion</h2>
-                        <p>With our aim to ‘wow’ our customers and delivering smiles, we have added a little something that goes into making every 'delivery' special..... </p>
+                        <p>With our aim to ‘wow’ our customers and delivering smiles, we have added a little something
+                            that goes into making every 'delivery' special..... </p>
                         <ul>
-                            <li> Hand picked just for you. </li>
-                            <li> Hand picked just for you. </li>
-                            <li> Hand picked just for. </li>
+                            <li> Hand picked just for you.</li>
+                            <li> Hand picked just for you.</li>
+                            <li> Hand picked just for.</li>
                         </ul>
                         <div class="about-btn">
                             <a href="{{route('page.about')}}" class="btn btn-primary btn-round">More Details</a>
@@ -124,7 +125,6 @@
         </div>
     </div>
     <!--About End-->
-
     <!--New Product Start-->
     <div class="features-product-area section-padding-5">
         <div class="container">
@@ -140,943 +140,57 @@
             <div class="product-wrapper">
                 <div class="product-tab-menu">
                     <ul class="nav justify-content-center" role="tablist">
-                        <li><a class="active" data-bs-toggle="tab" href="#tab1" role="tab">New</a></li>
-                        <li><a data-bs-toggle="tab" href="#tab2" role="tab">Featured</a></li>
-                        <li><a data-bs-toggle="tab" href="#tab3" role="tab">Best Sellers</a></li>
+                        @for($i=0; $i <  3; $i++)
+                            <li><a class=" @if($i == 0) active @endif" data-bs-toggle="tab"
+                                   href="#{{$categories[$i]->slug}}"
+                                   role="tab">{{$categories[$i]->title}}</a></li>
+                        @endfor
                     </ul>
                 </div>
 
+
                 <div class="tab-content product-items-tab">
-                    <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                        <div class="swiper-container product-active">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
+                    @for($i=0; $i <  3; $i++)
+                        <div class="tab-pane fade show  @if($i == 0) active @endif" id="{{$categories[$i]->slug}}"
+                             role="tabpanel">
+                            <div class="swiper-container product-active">
+                                <div class="swiper-wrapper">
+                                    @foreach($categories[$i]->categoryList as $cat)
+                                        <div class="swiper-slide">
+                                                <div class="single-product">
+                                                    <div class="product-image">
+                                                        <a href="/storage/{{$cat->image}}" data-lightbox="{{$cat->id}}" data-title="{{$cat->title}}">
+                                                            <img src="/storage/{{$cat->image}}" alt="{{$cat->title}}">
+                                                        </a>
 
+                                                    </div>
+                                                    <div class="product-content text-center">
+                                                        <h4 class="product-name"><a href="#">{{$cat->title}}</a></h4>
+                                                    </div>
+                                                </div>
+{{--                                                <div class="single-product">--}}
+{{--                                                    <div class="product-image">--}}
+{{--                                                        <a href="#">--}}
+{{--                                                            <img src="/storage/{{$cat->image}}" alt="{{$cat->title}}">--}}
+{{--                                                        </a>--}}
+
+
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-content text-center">--}}
+{{--                                                        <h4 class="product-name"><a href="#">{{$cat->title}}</a>--}}
+{{--                                                        </h4>--}}
+
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                         </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-27%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-4.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Foxglove Flower</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-3.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-35%</span>
-
-
-
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Scarlet Sage</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
+                                <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
                             </div>
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
-                            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab2" role="tabpanel">
-                        <div class="swiper-container product-active">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-27%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-3.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-35%</span>
-
-
-
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Scarlet Sage</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-4.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Foxglove Flower</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
-                            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab3" role="tabpanel">
-                        <div class="swiper-container product-active">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-27%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-2.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Rock Soapwort</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-4.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Foxglove Flower</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-5.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-18%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Summer Savory</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-7.jpg" alt="">
-                                            </a>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Sweet Alyssum</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-9.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Majesty Palm</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-8.jpg" alt="">
-                                            </a>
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Lity Majesty
-                                                    Palm</a></h4>
-                                            <div class="price-box">
-                                                <span class="current-price">$19.00</span>
-                                                <span class="old-price">$29.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-1.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new soldout-title">Soldout</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Spring Snowflake</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-6.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-10%</span>
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Wild Roses</a></h4>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="single-product">
-                                        <div class="product-image">
-                                            <a href="shop-single.html">
-                                                <img src="/assets/images/product/product-3.jpg" alt="">
-                                            </a>
-
-                                            <span class="sticker-new label-sale">-35%</span>
-
-
-
-
-
-                                        </div>
-                                        <div class="product-content text-center">
-                                            <h4 class="product-name"><a href="shop-single.html">Scarlet Sage</a>
-                                            </h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
-                            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
-                        </div>
-                    </div>
+                    @endfor
                 </div>
             </div>
         </div>
@@ -1104,78 +218,92 @@
 
     <section class="overflow-hidden pb-4">
         <div class="container-fluid p-0">
-          <div class="row justify-content-center no-gutters">
-            <div class="col-lg-6 col-md-6">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9890732362437!2d85.83720121471382!3d20.259287918975897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a74815beca63%3A0x152fa1a3a149cb47!2s28%2C%20Gautam%20Nagar%20St%2C%20Gautam%20Nagar%2C%20Bhubaneswar%2C%20Odisha%20751014!5e0!3m2!1sen!2sin!4v1635069464948!5m2!1sen!2sin" style="border:0; height:100%;" allowfullscreen=""></iframe>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-              <div class="p-6 bg-light h-100">
-                <h3>Complete the form below. We will respond as soon as possible.</h3>
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6 col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9890732362437!2d85.83720121471382!3d20.259287918975897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a74815beca63%3A0x152fa1a3a149cb47!2s28%2C%20Gautam%20Nagar%20St%2C%20Gautam%20Nagar%2C%20Bhubaneswar%2C%20Odisha%20751014!5e0!3m2!1sen!2sin!4v1635069464948!5m2!1sen!2sin"
+                        style="border:0; height:100%;" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="p-6 bg-light h-100">
+                        <h3>Complete the form below. We will respond as soon as possible.</h3>
 
-                @if ($succ = session('success'))
-
-
-                <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>{{ $succ }}</strong>.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
+                        @if ($succ = session('success'))
 
 
-                @if ($err = session('cterrs'))
+                            <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;"
+                                 class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>{{ $succ }}</strong>.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
+                        @endif
 
-                <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;" class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong>{{ $err }}</strong>.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
 
-                <form
-                    class="mt-4 row form-white"
-                    id="ctformFrin"
-                    method="POST"
-                    action="{{route('send.contactus')}}"
-                >
-                    @csrf
-                    <div class="form-group mb-3 col-lg-6">
-                        <input type="text" class="form-control" id="ctformFrinfirstname" value="{{old('firstname')}}" name="firstname"
-                            placeholder="First Name">
-                            @error('firstname')
-                            <div class="invalid-feedback d-block">{{$message}}</div>
-                            @enderror
-                    </div>
-                    <div class="form-group mb-3 col-lg-6">
-                        <input type="text" class="form-control"
-                        value="{{old('lastname')}}"id="ctformFrinlastname" name="lastname"
-                            placeholder="Last Name">
-                            @error('lastname')
-                            <div class="invalid-feedback d-block">{{$message}}</div>
-                            @enderror
-                    </div>
-                    <div class="form-group mb-3 col-12">
-                        <input value="{{old('email')}}" type="text" class="form-control" id="ctformFrinemail" name="email"
-                            placeholder="Email Address">
-                            @error('email')
-                            <div class="invalid-feedback d-block">{{$message}}</div>
-                            @enderror
-                    </div>
-                    <div class="form-group mb-4 col-12">
+                        @if ($err = session('cterrs'))
+
+                            <div style="position: fixed;right: 8px;z-index: 99999;top: 60px;width: 260px;"
+                                 class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>{{ $err }}</strong>.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        <form
+                            class="mt-4 row form-white"
+                            id="ctformFrin"
+                            method="POST"
+                            action="{{route('send.contactus')}}"
+                        >
+                            @csrf
+                            <div class="form-group mb-3 col-lg-6">
+                                <input type="text" class="form-control" id="ctformFrinfirstname"
+                                       value="{{old('firstname')}}" name="firstname"
+                                       placeholder="First Name">
+                                @error('firstname')
+                                <div class="invalid-feedback d-block">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group mb-3 col-lg-6">
+                                <input type="text" class="form-control"
+                                       value="{{old('lastname')}}" id="ctformFrinlastname" name="lastname"
+                                       placeholder="Last Name">
+                                @error('lastname')
+                                <div class="invalid-feedback d-block">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group mb-3 col-12">
+                                <input value="{{old('email')}}" type="text" class="form-control" id="ctformFrinemail"
+                                       name="email"
+                                       placeholder="Email Address">
+                                @error('email')
+                                <div class="invalid-feedback d-block">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group mb-4 col-12">
                         <textarea class="form-control" id="msg" name="msg"
-                            placeholder="Enquiry Description" rows="5">{{old('msg')}}</textarea>
-                            @error('msg')
-                            <div class="invalid-feedback d-block">{{$message}}</div>
-                            @enderror
+                                  placeholder="Enquiry Description" rows="5">{{old('msg')}}</textarea>
+                                @error('msg')
+                                <div class="invalid-feedback d-block">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div id="submMsg" class="col-12"></div>
+                            <div class="form-group mb-0 col-12">
+                                <button type="submit" class="btn btn-primary btn-block ctbtn-s">Get in Touch<i
+                                        class="fas fa-arrow-right ps-2"></i></button>
+                            </div>
+                        </form>
                     </div>
-                    <div id="submMsg" class="col-12"></div>
-                    <div class="form-group mb-0 col-12">
-                        <button type="submit" class="btn btn-primary btn-block ctbtn-s">Get in Touch<i
-                                class="fas fa-arrow-right ps-2"></i></button>
-                    </div>
-                </form>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
     </section>
 
 @endsection
+
+
+@push('css')
+
+@endpush
+

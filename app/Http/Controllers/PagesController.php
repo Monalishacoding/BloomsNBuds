@@ -17,7 +17,9 @@ class PagesController extends Controller
      */
     public function index() {
 
-        $categories = Category::where('status' , 1)->get();
+        $categories = Category::where('status' , 1)
+            ->with('categoryList')
+            ->get();
         $galleries =  Gallery::where('is_featured' , 1)->where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
         $testimonials =  Testimonial::where('status' , 1)->orderBy('id' , 'DESC')->limit(8)->get();
         return view('index' , compact('categories' , 'galleries' , 'testimonials'));
@@ -106,7 +108,7 @@ class PagesController extends Controller
      * Category Page
      */
     public function category($slug) {
-       
+
         $category = Category::with(['categoryList' => function($query) {
             $query->where('status' , 1)->orderBy('id' , 'DESC')->get();
         } ])->where([
